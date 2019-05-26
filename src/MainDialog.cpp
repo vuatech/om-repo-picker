@@ -1,19 +1,6 @@
 #include "MainDialog.h"
+#include "UpdateChannel.h"
 #include <QtGlobal>
-
-typedef struct {
-	char const * const name;
-	char const * const translatedName;
-	char const * const explanation;
-} Repo;
-
-static const Repo repos[] = {
-	{ "main", QT_TR_NOOP("Main"), QT_TR_NOOP("The Main repository contains the main packages that make up OpenMandriva Lx. It should always be enabled.") },
-	{ "unsupported", QT_TR_NOOP("Unsupported"), QT_TR_NOOP("Unsupported contains packages that are free, but not officially supported by OpenMandriva. While we will try to fix them if something breaks, this is a low priority. Enable Unsupported if you need them and don't mind an occasional crash.") },
-	{ "restricted", QT_TR_NOOP("Restricted"), QT_TR_NOOP("Restricted contains packages that are free, but encumbered by patents that may make them illegal to use or distribute in some countries. You are responsible for complying with your local laws.") },
-	{ "non-free", QT_TR_NOOP("Non-Free"), QT_TR_NOOP("Non-free contains packages that are not free (as in Open Source). Even if we want to, we cannot fix problems in them. We can not read the code, or verify what the packages actually do. While there are no known side effects, they may contain spyware or malware. They may erase your harddisk. You're on your own.") },
-	{ nullptr, nullptr, nullptr },
-};
 
 MainDialog::MainDialog(QWidget *parent, Qt::WindowFlags f):QDialog(parent,f) {
 	int y=0;
@@ -32,7 +19,7 @@ MainDialog::MainDialog(QWidget *parent, Qt::WindowFlags f):QDialog(parent,f) {
 	_layout->addWidget(_topLbl, ++y, 1, 1, 2);
 
 	for(int i=0; repos[i].name; i++) {
-		RepoWidget *w = new RepoWidget(tr(repos[i].translatedName), tr(repos[i].explanation), this);
+		RepoWidget *w = new RepoWidget(i, this);
 		_layout->addWidget(w, ++y, 1, 1, 2);
 		_repoWidgets.insert("main", w);
 	}

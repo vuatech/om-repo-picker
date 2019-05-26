@@ -8,7 +8,7 @@
 class RepoWidget:public QGroupBox {
 	Q_OBJECT
 public:
-	RepoWidget(QString const &name, QString const &text, QWidget *parent=0);
+	RepoWidget(int repo, QWidget *parent=0);
 protected:
 	QGridLayout	_layout;
 	QLabel *	_label;
