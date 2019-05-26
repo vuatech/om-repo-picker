@@ -19,6 +19,28 @@ const repo repos[] = {
 };
 
 static int cachedUpdateChannel = -1;
+static QString cachedArch = QString::null;
+
+QString rpmArch() {
+	if(!cachedArch.isNull())
+		return cachedArch;
+	QProcess p;
+	p.setProgram("/usr/bin/rpm");
+	p.setArguments(QStringList() << "--eval" << "%{_target_cpu}");
+	p.start(QIODevice::ReadOnly);
+	p.setReadChannel(QProcess::StandardOutput);
+	p.waitForFinished();
+	cachedArch=p.readAllStandardOutput().trimmed();
+	return cachedArch;
+}
+
+QString secondaryArch() {
+	if(rpmArch() == "x86_64" || rpmArch() == "znver1")
+		return "i686";
+	else if(rpmArch() == "aarch64")
+		return "armv7hnl";
+	return QString::null;
+}
 
 int currentUpdateChannel() {
 	if(cachedUpdateChannel >= 0)
@@ -27,7 +49,7 @@ int currentUpdateChannel() {
 	for(int i=0; updateChannels[i].name; i++) {
 		QProcess p;
 		p.setProgram("/usr/bin/dnf");
-		p.setArguments(QStringList() << "config-manager" << "--dump" << (QString(updateChannels[i].name) + "-x86_64"));
+		p.setArguments(QStringList() << "config-manager" << "--dump" << (QString(updateChannels[i].name) + "-" + rpmArch()));
 		p.start(QIODevice::ReadOnly);
 		p.setReadChannel(QProcess::StandardOutput);
 		p.waitForFinished();
@@ -49,9 +71,9 @@ int currentUpdateChannel() {
 	return 0;
 }
 
-bool repoEnabled(char const * const name) {
+bool repoEnabled(char const * const name, QString const &arch) {
 	QString repo=QString(updateChannels[currentUpdateChannel()].name) + "-";
-	repo += "x86_64";
+	repo += arch;
 	if(strcmp(name, "main"))
 		repo += QString("-") + name;
 	QProcess p;

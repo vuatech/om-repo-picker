@@ -1,4 +1,5 @@
 #pragma once
+#include <QString>
 
 typedef struct {
 	char const * const name;
@@ -9,4 +10,8 @@ typedef struct {
 extern const repo updateChannels[];
 extern const repo repos[];
 extern int currentUpdateChannel();
-extern bool repoEnabled(char const * const name);
+/** Get the current rpm architecture (unlike uname, this
+/   knows the difference between e.g. x86_64 and znver1 */
+extern QString rpmArch();
+extern QString secondaryArch();
+extern bool repoEnabled(char const * const name, QString const &arch=rpmArch());
