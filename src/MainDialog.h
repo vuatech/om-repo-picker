@@ -2,8 +2,12 @@
 #include <QDialog>
 #include <QGridLayout>
 #include <QLabel>
+#include <QComboBox>
 #include <QCheckBox>
 #include <QPushButton>
+#include <QMap>
+#include "UpdateChannelPicker.h"
+#include "RepoWidget.h"
 
 class MainDialog:public QDialog {
 	Q_OBJECT
@@ -11,19 +15,9 @@ public:
 	MainDialog(QWidget *parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
 protected:
 	QGridLayout *	_layout;
+	UpdateChannelPicker *	_updateChannel;
 	QLabel *	_topLbl;
-	QLabel *	_mainExp;
-	QCheckBox *	_main;
-	QCheckBox *	_main32;
-	QLabel *	_unsupportedExp;
-	QCheckBox *	_unsupported;
-	QCheckBox *	_unsupported32;
-	QLabel *	_restrictedExp;
-	QCheckBox *	_restricted;
-	QCheckBox *	_restricted32;
-	QLabel *	_nonfreeExp;
-	QCheckBox *	_nonfree;
-	QCheckBox *	_nonfree32;
+	QMap<QString,RepoWidget*>	_repoWidgets;
 	QPushButton *	_ok;
 	QPushButton *	_cancel;
 };
