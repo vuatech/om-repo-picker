@@ -9,6 +9,7 @@ class UpdateChannelPicker:public QGroupBox {
 	Q_OBJECT
 public:
 	UpdateChannelPicker(QWidget *parent=0);
+	int updateChannel() const { return _updateChannel->currentIndex(); }
 public slots:
 	void updateChannelSelected(int index);
 protected:

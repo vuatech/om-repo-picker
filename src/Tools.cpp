@@ -1,6 +1,12 @@
-#include "UpdateChannel.h"
+#include "Tools.h"
 #include <QProcess>
+#include <QFile>
 #include <QByteArray>
+
+#include <iostream>
+
+#include <unistd.h>
+#include <fcntl.h>
 
 const repo updateChannels[] = {
 	{ "release", QT_TR_NOOP("Release"), QT_TR_NOOP("Always stay on this release") },
@@ -22,7 +28,7 @@ static int cachedUpdateChannel = -1;
 static QString cachedArch = QString::null;
 
 QString rpmArch() {
-	if(!cachedArch.isNull())
+	if(!cachedArch.isEmpty())
 		return cachedArch;
 	QProcess p;
 	p.setProgram("/usr/bin/rpm");
@@ -71,11 +77,20 @@ int currentUpdateChannel() {
 	return 0;
 }
 
-bool repoEnabled(char const * const name, QString const &arch) {
-	QString repo=QString(updateChannels[currentUpdateChannel()].name) + "-";
-	repo += arch;
-	if(strcmp(name, "main"))
-		repo += QString("-") + name;
+QString repoName(int repo, int updateChannel, QString const &arch, QString const &special) {
+	if(updateChannel < 0)
+		updateChannel = currentUpdateChannel();
+
+	QString r=QString(updateChannels[updateChannel].name);
+	if(!special.isEmpty())
+		r += "-" + special;
+       	r += "-" + arch;
+	if(strcmp(repos[repo].name, "main"))
+		r += QString("-") + repos[repo].name;
+	return r;
+}
+
+bool repoEnabled(QString const &repo) {
 	QProcess p;
 	p.setProgram("/usr/bin/dnf");
 	p.setArguments(QStringList() << "config-manager" << "--dump" << repo);
@@ -88,4 +103,30 @@ bool repoEnabled(char const * const name, QString const &arch) {
 			return b.endsWith("1");
 	}
 	return false;
+}
+
+bool disableRepos(QStringList const &repos) {
+	QString cmd;
+	QStringList args;
+	if(access(QFile::encodeName("/etc/yum.repos.d/openmandriva-cooker-" + rpmArch() + ".repo"), W_OK)) {
+		cmd="/usr/bin/kdesu";
+		args << "--" << "/usr/bin/dnf";
+	} else {
+		cmd="/usr/bin/dnf";
+	}
+	args << "config-manager" << "--set-disabled" << repos;
+	return QProcess::execute(cmd, args) == 0;
+}
+
+bool enableRepos(QStringList const &repos) {
+	QString cmd;
+	QStringList args;
+	if(access(QFile::encodeName("/etc/yum.repos.d/openmandriva-cooker-" + rpmArch() + ".repo"), W_OK)) {
+		cmd="/usr/bin/kdesu";
+		args << "--" << "/usr/bin/dnf";
+	} else {
+		cmd="/usr/bin/dnf";
+	}
+	args << "config-manager" << "--set-enabled" << repos;
+	return QProcess::execute(cmd, args) == 0;
 }

@@ -1,6 +1,8 @@
 #include "MainDialog.h"
-#include "UpdateChannel.h"
+#include "Tools.h"
 #include <QtGlobal>
+#include <QMessageBox>
+#include <QApplication>
 
 MainDialog::MainDialog(QWidget *parent, Qt::WindowFlags f):QDialog(parent,f) {
 	int y=0;
@@ -18,19 +20,116 @@ MainDialog::MainDialog(QWidget *parent, Qt::WindowFlags f):QDialog(parent,f) {
 	_topLbl->setWordWrap(true);
 	_layout->addWidget(_topLbl, ++y, 1, 1, 2);
 
+	int repoCount=0;
+	for(repoCount=0; repos[repoCount].name; repoCount++);
+
+	_repoWidgets=new RepoWidget*[repoCount];
 	for(int i=0; repos[i].name; i++) {
-		RepoWidget *w = new RepoWidget(i, this);
-		_layout->addWidget(w, ++y, 1, 1, 2);
-		_repoWidgets.insert("main", w);
+		_repoWidgets[i]=new RepoWidget(i, this);
+		_layout->addWidget(_repoWidgets[i], ++y, 1, 1, 2);
 	}
 
-	_ok = new QPushButton(tr("O&K"), this);
+	_ok = new QPushButton(tr("&OK"), this);
 	_layout->addWidget(_ok, ++y, 1);
-	_cancel = new QPushButton(tr("Cance&l"), this);
+	_cancel = new QPushButton(tr("&Cancel"), this);
 	_layout->addWidget(_cancel, y, 2);
 
 	_ok->setFocus();
 
-	connect(_ok, &QPushButton::clicked, this, &QDialog::accept);
+	connect(_ok, &QPushButton::clicked, this, &MainDialog::okClicked);
 	connect(_cancel, &QPushButton::clicked, this, &QDialog::reject);
+}
+
+MainDialog::~MainDialog() {
+	delete[] _repoWidgets;
+}
+
+void MainDialog::okClicked() {
+	hide();
+	QApplication::processEvents();
+
+	QStringList disable;
+	QStringList enable;
+	int const uc=_updateChannel->updateChannel();
+	if(uc != currentUpdateChannel()) {
+		for(int i=0; repos[i].name; i++) {
+			QString name=repoName(i, currentUpdateChannel());
+			if(repoEnabled(name))
+				disable << name;
+			// Also got to disable updates repositories (for release (0) and rock (1))
+			// and testing (for all)
+			if(currentUpdateChannel() < 2) {
+				name=repoName(i, currentUpdateChannel(), rpmArch(), "updates");
+				if(repoEnabled(name))
+					disable << name;
+			}
+			name=repoName(i, currentUpdateChannel(), rpmArch(), "testing");
+			if(repoEnabled(name))
+				disable << name;
+			if(!secondaryArch().isEmpty()) {
+				name=repoName(i, currentUpdateChannel(), secondaryArch());
+				if(repoEnabled(name))
+					disable << name;
+				// Also got to disable updates repositories (for release (0) and rock (1))
+				// and testing (for all)
+				if(currentUpdateChannel() < 2) {
+					name=repoName(i, currentUpdateChannel(), secondaryArch(), "updates");
+					if(repoEnabled(name))
+						disable << name;
+				}
+				name=repoName(i, currentUpdateChannel(), secondaryArch(), "testing");
+				if(repoEnabled(name))
+					disable << name;
+			}
+		}
+	}
+
+	for(int i=0; repos[i].name; i++) {
+		QString name=repoName(i, uc);
+		if(_repoWidgets[i]->enabled() && !repoEnabled(name)) {
+			enable << name;
+			if(uc < 2) {
+				name=repoName(i, uc, rpmArch(), "updates");
+				if(!repoEnabled(name))
+					enable << name;
+			}
+		} else if(!_repoWidgets[i]->enabled() && repoEnabled(name)) {
+			disable << name;
+			if(uc < 2) {
+				name=repoName(i, uc, rpmArch(), "updates");
+				if(repoEnabled(name))
+					disable << name;
+			}
+			name=repoName(i, uc, rpmArch(), "testing");
+			if(repoEnabled(name))
+				disable << name;
+		}
+		if(!secondaryArch().isEmpty()) {
+			name=repoName(i, uc, secondaryArch());
+			if(_repoWidgets[i]->enabled32() && !repoEnabled(name)) {
+				enable << name;
+				if(uc < 2) {
+					name=repoName(i, uc, secondaryArch(), "updates");
+					if(!repoEnabled(name))
+						enable << name;
+				}
+			}
+			else if(!_repoWidgets[i]->enabled32() && repoEnabled(name)) {
+				disable << name;
+				if(uc < 2) {
+					name=repoName(i, uc, secondaryArch(), "updates");
+					if(repoEnabled(name))
+						disable << name;
+				}
+				name=repoName(i, uc, secondaryArch(), "testing");
+				if(repoEnabled(name))
+					disable << name;
+			}
+		}
+	}
+	if(!disable.isEmpty())
+		disableRepos(disable);
+	if(!enable.isEmpty())
+		enableRepos(enable);
+	QDialog::accept();
 }
