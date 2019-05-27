@@ -5,17 +5,20 @@
 #include <QProcess>
 
 UpdateChannelPicker::UpdateChannelPicker(QWidget *parent):QGroupBox(tr("U&pdate channel"), parent),_layout(this) {
-
+	int y=0;
 	_updateChannelLbl = new QLabel(tr("&Update channel:"), this);
-	_layout.addWidget(_updateChannelLbl, 0, 0);
+	_layout.addWidget(_updateChannelLbl, y, 0);
 	_updateChannel = new QComboBox(this);
-	_layout.addWidget(_updateChannel, 0, 1);
+	_layout.addWidget(_updateChannel, y, 1);
 	_updateChannelLbl->setBuddy(_updateChannel);
 	for(int i=0; updateChannels[i].name; i++)
 		_updateChannel->addItem(tr(updateChannels[i].translatedName), QVariant(updateChannels[i].name));
 	connect(_updateChannel, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, &UpdateChannelPicker::updateChannelSelected);
 	_updateChannelExplanation = new QLabel(this);
-	_layout.addWidget(_updateChannelExplanation, 1, 0, 1, 2);
+	_layout.addWidget(_updateChannelExplanation, ++y, 0, 1, 2);
+	_enableTesting = new QCheckBox(tr("Enable &testing repositories (Updates ahead of time for QA)"), this);
+	_layout.addWidget(_enableTesting, ++y, 0, 1, 2);
+	_enableTesting->setChecked(repoEnabled(repoName(0, -1, rpmArch(), "testing")));
 	_updateChannel->setCurrentIndex(currentUpdateChannel());
 }
 

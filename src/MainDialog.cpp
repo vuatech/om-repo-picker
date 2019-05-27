@@ -104,6 +104,13 @@ void MainDialog::okClicked() {
 			if(repoEnabled(name))
 				disable << name;
 		}
+
+		name=repoName(i, uc, rpmArch(), "testing");
+		if(_repoWidgets[i]->enabled() && _updateChannel->testingEnabled() && !repoEnabled(name))
+			enable << name;
+		else if(!_updateChannel->testingEnabled() && repoEnabled(name))
+			disable << name;
+
 		if(!secondaryArch().isEmpty()) {
 			name=repoName(i, uc, secondaryArch());
 			if(_repoWidgets[i]->enabled32() && !repoEnabled(name)) {
@@ -125,11 +132,23 @@ void MainDialog::okClicked() {
 				if(repoEnabled(name))
 					disable << name;
 			}
+
+			name=repoName(i, uc, secondaryArch(), "testing");
+			if(_repoWidgets[i]->enabled32() && _updateChannel->testingEnabled() && !repoEnabled(name))
+				enable << name;
+			else if(!_updateChannel->testingEnabled() && repoEnabled(name))
+				disable << name;
 		}
 	}
+	disable.removeDuplicates();
+	enable.removeDuplicates();
 	if(!disable.isEmpty())
 		disableRepos(disable);
 	if(!enable.isEmpty())
 		enableRepos(enable);
 	QDialog::accept();
+
+	if(uc != currentUpdateChannel()) {
+		QMessageBox::information(0, tr("Update channel changed"), tr("The update channel has been changed. You probably want to refresh all packages in the graphical package manager or by running \"dnf --refresh distro-sync\" in a command line."), QMessageBox::Ok);
+	}
 }
