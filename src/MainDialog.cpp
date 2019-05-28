@@ -2,9 +2,13 @@
 #include "Tools.h"
 #include <QtGlobal>
 #include <QMessageBox>
+#include <QDesktopWidget>
 #include <QApplication>
 
 MainDialog::MainDialog(QWidget *parent, Qt::WindowFlags f):QDialog(parent,f) {
+	setWindowIcon(QIcon("/usr/share/icons/hicolor/scalable/apps/om-repopicker.svg"));
+	setWindowTitle(tr("OpenMandriva Software Repository Picker"));
+
 	int y=0;
 
 	_layout = new QGridLayout(this);
@@ -42,6 +46,20 @@ MainDialog::MainDialog(QWidget *parent, Qt::WindowFlags f):QDialog(parent,f) {
 
 MainDialog::~MainDialog() {
 	delete[] _repoWidgets;
+}
+
+QSize MainDialog::sizeHint() const {
+	// The dialog tends to be too small (truncating some text)
+	// without overriding sizeHint...
+	int w = QDialog::sizeHint().width(),
+	    h = QDialog::sizeHint().height();
+	int const aw = QApplication::desktop()->availableGeometry().width(),
+	          ah = QApplication::desktop()->availableGeometry().height();
+	if(h < ah * .95)
+		h = ah * .95;
+	if(w < aw * .6)
+		w = aw * .6;
+	return QSize(w, h);
 }
 
 void MainDialog::okClicked() {

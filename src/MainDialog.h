@@ -15,6 +15,7 @@ class MainDialog:public QDialog {
 public:
 	MainDialog(QWidget *parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
 	~MainDialog();
+	QSize sizeHint() const override;
 public slots:
 	void okClicked();
 protected:
