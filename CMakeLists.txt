@@ -15,5 +15,6 @@ include(KDECompilerSettings)
 find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Gui Widgets)
 
 add_subdirectory(src)
+add_subdirectory(desktop)
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)

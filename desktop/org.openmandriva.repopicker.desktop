@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Software Repository Selector
+GenericName=Software Repository Selector
+Comment=Select from where you receive updates and additional software
+Exec=om-repo-picker
+Icon=om-repopicker
+Terminal=false
+Type=Application
+Categories=Qt;System;
