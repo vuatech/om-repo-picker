@@ -20,8 +20,11 @@ MainDialog::MainDialog(QWidget *parent, Qt::WindowFlags f):QDialog(parent,f) {
 	_layout->addWidget(_updateChannel, y, 1, 1, 2);
 
 	QString help = tr("Below, you can select from which repositories you want to install and update packages (extra applications, games, etc.).");
-	help += "\n";
-	help += tr("32-bit repositories contain the same packages built for 32 bit processors. Those repositories are usually useful only for compatibility with prebuilt packages for older systems - such as binary-only games and applications built for 32-bit processors and running 32-bit Windows applications in Wine.");
+	QString const sa=secondaryArch();
+	if(!sa.isEmpty()) {
+		help += "\n";
+		help += tr("%1 repositories contain the same packages built for %2 processors. Those repositories are usually useful only for compatibility with prebuilt packages for older systems - such as binary-only games and applications built for %3 processors.").arg(sa).arg(sa).arg(sa);
+	}
 	_topLbl = new QLabel(help, this);
 	_topLbl->setWordWrap(true);
 	_layout->addWidget(_topLbl, ++y, 1, 1, 2);

@@ -16,7 +16,7 @@ RepoWidget::RepoWidget(int repo, QWidget *parent):QGroupBox(repos[repo].translat
 		_enable->setDisabled(true);
 	}
 	if(!secondaryArch().isNull()) {
-		_enable32 = new QCheckBox(tr("Ena&ble 32-bit"), this);
+		_enable32 = new QCheckBox(tr("Ena&ble %1 repositories").arg(secondaryArch()), this);
 		_enable32->setChecked(repoEnabled(repoName(repo, -1, secondaryArch())));
 		_layout.addWidget(_enable32, y, 2);
 	} else

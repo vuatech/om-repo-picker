@@ -32,18 +32,29 @@ QString rpmArch() {
 		return cachedArch;
 	QProcess p;
 	p.setProgram("/usr/bin/rpm");
-	p.setArguments(QStringList() << "--eval" << "%{_target_cpu}");
+	// We really want:
+	//p.setArguments(QStringList() << "--eval" << "%{_target_cpu}");
+	// But this doesn't catch the special case of using an x86_64 OS
+	// on a znver1 machine -- so let's query a core package instead
+	p.setArguments(QStringList() << "-q" << "--qf" << "%{ARCH}" << "filesystem");
 	p.start(QIODevice::ReadOnly);
 	p.setReadChannel(QProcess::StandardOutput);
 	p.waitForFinished();
 	cachedArch=p.readAllStandardOutput().trimmed();
+	if(cachedArch.isEmpty()) {
+		// Fall back to --eval %{_target_cpu} if for some reason filesystem isn't installed
+		p.setProgram("/usr/bin/rpm");
+		p.setArguments(QStringList() << "--eval" << "%{_target_cpu}");
+		p.start(QIODevice::ReadOnly);
+		p.setReadChannel(QProcess::StandardOutput);
+		p.waitForFinished();
+		cachedArch=p.readAllStandardOutput().trimmed();
+	}
 	return cachedArch;
 }
 
 QString secondaryArch() {
-	if(rpmArch() == "x86_64" || rpmArch() == "znver1")
-		return "i686";
-	else if(rpmArch() == "aarch64")
+	if(rpmArch() == "aarch64")
 		return "armv7hnl";
 	return QString();
 }
