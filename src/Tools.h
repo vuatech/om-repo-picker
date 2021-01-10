@@ -21,7 +21,7 @@ extern QString secondaryArch();
  * @param arch Architecture (by default, current architecture will be used)
  * @param special "Special" repository (updates/testing/...)
  */
-extern QString repoName(int repo, int updateChannel=-1, QString const &arch=rpmArch(), QString const &special=QString::null);
+extern QString repoName(int repo, int updateChannel=-1, QString const &arch=rpmArch(), QString const &special=QString());
 extern bool repoEnabled(QString const &repoName);
 extern bool disableRepos(QStringList const &repos);
 extern bool enableRepos(QStringList const &repos);

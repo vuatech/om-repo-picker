@@ -25,7 +25,7 @@ const repo repos[] = {
 };
 
 static int cachedUpdateChannel = -1;
-static QString cachedArch = QString::null;
+static QString cachedArch = QString();
 
 QString rpmArch() {
 	if(!cachedArch.isEmpty())
@@ -45,7 +45,7 @@ QString secondaryArch() {
 		return "i686";
 	else if(rpmArch() == "aarch64")
 		return "armv7hnl";
-	return QString::null;
+	return QString();
 }
 
 int currentUpdateChannel() {

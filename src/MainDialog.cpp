@@ -4,6 +4,8 @@
 #include <QMessageBox>
 #include <QDesktopWidget>
 #include <QApplication>
+#include <QWindow>
+#include <QScreen>
 
 MainDialog::MainDialog(QWidget *parent, Qt::WindowFlags f):QDialog(parent,f) {
 	setWindowIcon(QIcon("/usr/share/icons/hicolor/scalable/apps/om-repopicker.svg"));
@@ -53,8 +55,9 @@ QSize MainDialog::sizeHint() const {
 	// without overriding sizeHint...
 	int w = QDialog::sizeHint().width(),
 	    h = QDialog::sizeHint().height();
-	int const aw = QApplication::desktop()->availableGeometry().width(),
-	          ah = QApplication::desktop()->availableGeometry().height();
+	QScreen const * const s = windowHandle()->screen();
+	int const aw = s->availableGeometry().width(),
+	          ah = s->availableGeometry().height();
 	if(h < ah * .95)
 		h = ah * .95;
 	if(w < aw * .6)
