@@ -75,7 +75,7 @@
     <message>
         <location filename="../src/UpdateChannelPicker.cpp" line="30"/>
         <source>You&apos;re trying to switch to an update channel older than what you&apos;re currently using. This will result in downgrading packages, which may or may not work. Going back to older versions is unsupported (older versions of applications can&apos;t know about potential changes in newer versions...) and may well break your system. Are you sure you want to do this?</source>
-        <translation>Je probeert af te waarderen naar een kanaal dat ouder is dat je huidige. Hierdoor worden pakketten afgewaardeerd, welke nadien mogelijk niet meer zullen werken. Afwaarderen wordt niet ondersteund (oudere versies van programma&apos;s weten niet af van wijzigingen in nieuwere) en gaat je systeem kapotmaken. Weet je zeker dat je wilt doorgaan?</translation>
+        <translation>Je staat op het punt om over te schakelen naar een kanaal dat ouder is dan je huidige. Hierdoor worden pakketten afgewaardeerd, welke nadien mogelijk niet meer zullen werken. Afwaarderen wordt niet ondersteund (oudere versies van programma&apos;s weten niet af van wijzigingen in nieuwere) en gaat je systeem kapotmaken. Weet je zeker dat je wilt doorgaan?</translation>
     </message>
     <message>
         <location filename="../src/UpdateChannelPicker.cpp" line="35"/>
