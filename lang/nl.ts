@@ -70,7 +70,7 @@
     <message>
         <location filename="../src/UpdateChannelPicker.cpp" line="30"/>
         <source>Really try to downgrade?</source>
-        <translation>Weet je zeker dat je wilt afwaarderen?</translation>
+        <translation>Afwaarderen bevestigen</translation>
     </message>
     <message>
         <location filename="../src/UpdateChannelPicker.cpp" line="30"/>
