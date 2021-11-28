@@ -80,7 +80,7 @@
     <message>
         <location filename="../src/UpdateChannelPicker.cpp" line="35"/>
         <source>Really upgrade?</source>
-        <translation>Weet je zeker dat je wilt opwaarderen?</translation>
+        <translation>Opwaarderen bevestigen</translation>
     </message>
     <message>
         <location filename="../src/UpdateChannelPicker.cpp" line="35"/>
