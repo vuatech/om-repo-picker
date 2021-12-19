@@ -9,31 +9,31 @@
 #include <fcntl.h>
 
 const repo updateChannels[] = {
-	{ "release", QT_TR_NOOP("Release"), QT_TR_NOOP("Always stay on this release"), nullptr, nullptr },
-	{ "rock", QT_TR_NOOP("Rock"), QT_TR_NOOP("Always stay on current stable release"), nullptr, nullptr },
-	{ "rolling", QT_TR_NOOP("Rolling"), QT_TR_NOOP("Rolling release - current, working versions"), nullptr, nullptr },
-	{ "cooker", QT_TR_NOOP("Cooker"), QT_TR_NOOP("Development branch - most current, may break at any time"), nullptr, nullptr },
+	{ "release", QT_TRANSLATE_NOOP("updateChannels", "Release"), QT_TRANSLATE_NOOP("updateChannels", "Always stay on this release"), nullptr, nullptr },
+	{ "rock", QT_TRANSLATE_NOOP("updateChannels", "Rock"), QT_TRANSLATE_NOOP("updateChannels", "Always stay on current stable release"), nullptr, nullptr },
+	{ "rolling", QT_TRANSLATE_NOOP("updateChannels", "Rolling"), QT_TRANSLATE_NOOP("updateChannels", "Rolling release - current, working versions"), nullptr, nullptr },
+	{ "cooker", QT_TRANSLATE_NOOP("updateChannels", "Cooker"), QT_TRANSLATE_NOOP("updateChannels", "Development branch - most current, may break at any time"), nullptr, nullptr },
 	{ nullptr, nullptr, nullptr, nullptr, nullptr },
 };
 
 const repo repos[] = {
-	{ "main", QT_TR_NOOP("Main"), QT_TR_NOOP("The Main repository contains the main packages that make up OpenMandriva Lx. It should always be enabled."), nullptr, nullptr },
-	{ "unsupported", QT_TR_NOOP("Unsupported"), QT_TR_NOOP("Unsupported contains packages that are free, but not officially supported by OpenMandriva. While we will try to fix them if something breaks, this is a low priority. Enable Unsupported if you need them and don't mind an occasional crash."), nullptr, nullptr },
-	{ "restricted", QT_TR_NOOP("Restricted"), QT_TR_NOOP("Restricted contains packages that are free, but encumbered by patents that may make them illegal to use or distribute in some countries. You are responsible for complying with your local laws."), nullptr, nullptr },
-	{ "non-free", QT_TR_NOOP("Non-Free"), QT_TR_NOOP("Non-free contains packages that are not free (as in Open Source). Even if we want to, we cannot fix problems in them. We can not read the code, or verify what the packages actually do. While there are no known side effects, they may contain spyware or malware. They may erase your harddisk. You're on your own."), nullptr, nullptr },
+	{ "main", QT_TRANSLATE_NOOP("repos", "Main"), QT_TRANSLATE_NOOP("main", "The Main repository contains the main packages that make up OpenMandriva Lx. It should always be enabled."), nullptr, nullptr },
+	{ "unsupported", QT_TRANSLATE_NOOP("repos", "Unsupported"), QT_TRANSLATE_NOOP("repos", "Unsupported contains packages that are free, but not officially supported by OpenMandriva. While we will try to fix them if something breaks, this is a low priority. Enable Unsupported if you need them and don't mind an occasional crash."), nullptr, nullptr },
+	{ "restricted", QT_TRANSLATE_NOOP("repos", "Restricted"), QT_TRANSLATE_NOOP("repos", "Restricted contains packages that are free, but encumbered by patents that may make them illegal to use or distribute in some countries. You are responsible for complying with your local laws."), nullptr, nullptr },
+	{ "non-free", QT_TRANSLATE_NOOP("repos", "Non-Free"), QT_TRANSLATE_NOOP("repos", "Non-free contains packages that are not free (as in Open Source). Even if we want to, we cannot fix problems in them. We can not read the code, or verify what the packages actually do. While there are no known side effects, they may contain spyware or malware. They may erase your harddisk. You're on your own."), nullptr, nullptr },
 	{ nullptr, nullptr, nullptr, nullptr, nullptr },
 };
 
 const repo thirdPartyRepos[] = {
 #ifdef __x86_64__
-	{ "google-chrome", QT_TR_NOOP("Google Chrome"), QT_TR_NOOP("The Google Chrome browser. We strongly recommend using a free browser, such as Falkon, Chromium, Firefox or Otter instead."), "http://dl.google.com/linux/chrome/rpm/stable/x86_64", "https://dl.google.com/linux/linux_signing_key.pub" },
-	{ "microsoft-edge", QT_TR_NOOP("Microsoft Edge"), QT_TR_NOOP("The Microsoft Edge browser. We strongly recommend using a free browser, such as Falkon, Chromium, Firefox or Otter instead."), "https://packages.microsoft.com/yumrepos/edge/", "https://packages.microsoft.com/keys/microsoft.asc" },
-	{ "skype", QT_TR_NOOP("Skype"), QT_TR_NOOP("The Skype instant messenger. We strongly recommend using a free messenger, such as Telegram, instead."), "https://repo.skype.com/rpm/stable/", "https://repo.skype.com/data/SKYPE_GPG-KEY" },
-	{ "skype-unstable", QT_TR_NOOP("Skype Unstable"), QT_TR_NOOP("Beta versions of the Skype instant messenger. We strongly recommend using a free messenger, such as Telegram, instead."), "https://repo.skype.com/rpm/stable/", "https://repo.skype.com/data/SKYPE_GPG-KEY" },
-	{ "teams", QT_TR_NOOP("Microsoft Teams"), QT_TR_NOOP("The Microsoft Teams business communication platform. We strongly recommend using a free platform, such as Mattermost, instead."), "https://packages.microsoft.com/yumrepos/ms-teams", "https://packages.microsoft.com/keys/microsoft.asc" },
+	{ "google-chrome", QT_TRANSLATE_NOOP("thirdPartyRepos", "Google Chrome"), QT_TRANSLATE_NOOP("thirdPartyRepos", "The Google Chrome browser. We strongly recommend using a free browser, such as Falkon, Chromium, Firefox or Otter instead."), "http://dl.google.com/linux/chrome/rpm/stable/x86_64", "https://dl.google.com/linux/linux_signing_key.pub" },
+	{ "microsoft-edge", QT_TRANSLATE_NOOP("thirdPartyRepos", "Microsoft Edge"), QT_TRANSLATE_NOOP("thirdPartyRepos", "The Microsoft Edge browser. We strongly recommend using a free browser, such as Falkon, Chromium, Firefox or Otter instead."), "https://packages.microsoft.com/yumrepos/edge/", "https://packages.microsoft.com/keys/microsoft.asc" },
+	{ "skype", QT_TRANSLATE_NOOP("thirdPartyRepos", "Skype"), QT_TRANSLATE_NOOP("thirdPartyRepos", "The Skype instant messenger. We strongly recommend using a free messenger, such as Telegram, instead."), "https://repo.skype.com/rpm/stable/", "https://repo.skype.com/data/SKYPE_GPG-KEY" },
+	{ "skype-unstable", QT_TRANSLATE_NOOP("thirdPartyRepos", "Skype Unstable"), QT_TRANSLATE_NOOP("thirdPartyRepos", "Beta versions of the Skype instant messenger. We strongly recommend using a free messenger, such as Telegram, instead."), "https://repo.skype.com/rpm/stable/", "https://repo.skype.com/data/SKYPE_GPG-KEY" },
+	{ "teams", QT_TRANSLATE_NOOP("thirdPartyRepos", "Microsoft Teams"), QT_TRANSLATE_NOOP("thirdPartyRepos", "The Microsoft Teams business communication platform. We strongly recommend using a free platform, such as Mattermost, instead."), "https://packages.microsoft.com/yumrepos/ms-teams", "https://packages.microsoft.com/keys/microsoft.asc" },
 #endif
 #if defined(__x86_64__) || defined(__aarch64__) || defined(__arm__)
-	{ "vscode", QT_TR_NOOP("Visual Studio Code"), QT_TR_NOOP("The Visual Studio Code IDE. We strongly recommend using Qt Creator, KDevelop or other alternative IDEs."), "https://packages.microsoft.com/yumrepos/vscode/", "https://packages.microsoft.com/keys/microsoft.asc" },
+	{ "vscode", QT_TRANSLATE_NOOP("thirdPartyRepos", "Visual Studio Code"), QT_TRANSLATE_NOOP("thirdPartyRepos", "The Visual Studio Code IDE. We strongly recommend using Qt Creator, KDevelop or other alternative IDEs."), "https://packages.microsoft.com/yumrepos/vscode/", "https://packages.microsoft.com/keys/microsoft.asc" },
 #endif
 	{ nullptr, nullptr, nullptr, nullptr, nullptr },
 };

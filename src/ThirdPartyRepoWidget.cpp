@@ -1,3 +1,4 @@
+#include <QCoreApplication>
 #include "ThirdPartyRepoWidget.h"
 #include "Tools.h"
 
@@ -6,7 +7,7 @@ ThirdPartyRepoWidget::ThirdPartyRepoWidget(QWidget *parent):QGroupBox(tr("Third 
 	_label->setWordWrap(true);
 	_layout.addWidget(_label);
 	for(int i=0; thirdPartyRepos[i].name; i++) {
-		QCheckBox *cb=new QCheckBox(thirdPartyRepos[i].description, this);
+		QCheckBox *cb=new QCheckBox(QCoreApplication::translate("thirdPartyRepos", thirdPartyRepos[i].description), this);
 		cb->setChecked(::repoEnabled(thirdPartyRepos[i].name));
 		_layout.addWidget(cb);
 		_repo.append(cb);

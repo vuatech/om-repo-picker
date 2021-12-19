@@ -1,5 +1,6 @@
 #include "UpdateChannelPicker.h"
 #include "Tools.h"
+#include <QCoreApplication>
 #include <QHBoxLayout>
 #include <QMessageBox>
 #include <QProcess>
@@ -12,7 +13,7 @@ UpdateChannelPicker::UpdateChannelPicker(QWidget *parent):QGroupBox(tr("U&pdate 
 	_layout.addWidget(_updateChannel, y, 1);
 	_updateChannelLbl->setBuddy(_updateChannel);
 	for(int i=0; updateChannels[i].name; i++)
-		_updateChannel->addItem(tr(updateChannels[i].translatedName), QVariant(updateChannels[i].name));
+		_updateChannel->addItem(QCoreApplication::translate("updateChannels", updateChannels[i].translatedName), QVariant(updateChannels[i].name));
 	connect(_updateChannel, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, &UpdateChannelPicker::updateChannelSelected);
 	_updateChannelExplanation = new QLabel(this);
 	_layout.addWidget(_updateChannelExplanation, ++y, 0, 1, 2);
