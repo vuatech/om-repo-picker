@@ -8,7 +8,7 @@
 #include <QMap>
 #include "Tools.h"
 #include "UpdateChannelPicker.h"
-#include "RepoWidget.h"
+#include "OMRepos.h"
 #include "ThirdPartyRepoWidget.h"
 
 class MainDialog:public QDialog {
@@ -23,7 +23,7 @@ protected:
 	QGridLayout *	_layout;
 	UpdateChannelPicker *	_updateChannel;
 	QLabel *	_topLbl;
-	RepoWidget **	_repoWidgets;
+	OMRepos *	_omRepos;
 	ThirdPartyRepoWidget *_thirdParty;
 	QPushButton *	_ok;
 	QPushButton *	_cancel;

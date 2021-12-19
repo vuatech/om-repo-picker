@@ -14,23 +14,31 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainDialog.cpp" line="48"/>
+        <location filename="../src/MainDialog.cpp" line="45"/>
         <source>&amp;OK</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainDialog.cpp" line="50"/>
+        <location filename="../src/MainDialog.cpp" line="47"/>
         <source>&amp;Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainDialog.cpp" line="178"/>
+        <location filename="../src/MainDialog.cpp" line="175"/>
         <source>Update channel changed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainDialog.cpp" line="178"/>
+        <location filename="../src/MainDialog.cpp" line="175"/>
         <source>The update channel has been changed. You probably want to refresh all packages in the graphical package manager or by running &quot;dnf --refresh distro-sync&quot; in a command line.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>OMRepos</name>
+    <message>
+        <location filename="../src/OMRepos.cpp" line="9"/>
+        <source>OpenMandriva repositories</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -135,61 +143,71 @@
     <name>thirdPartyRepos</name>
     <message>
         <location filename="../src/Tools.cpp" line="29"/>
-        <source>Google Chrome</source>
+        <source>Brave Browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="29"/>
+        <source>The Brave web browser.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/Tools.cpp" line="30"/>
+        <source>Google Chrome</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/Tools.cpp" line="30"/>
         <source>The Google Chrome browser. We strongly recommend using a free browser, such as Falkon, Chromium, Firefox or Otter instead.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/Tools.cpp" line="30"/>
+        <location filename="../src/Tools.cpp" line="31"/>
         <source>Microsoft Edge</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/Tools.cpp" line="30"/>
+        <location filename="../src/Tools.cpp" line="31"/>
         <source>The Microsoft Edge browser. We strongly recommend using a free browser, such as Falkon, Chromium, Firefox or Otter instead.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/Tools.cpp" line="31"/>
+        <location filename="../src/Tools.cpp" line="32"/>
         <source>Skype</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/Tools.cpp" line="31"/>
+        <location filename="../src/Tools.cpp" line="32"/>
         <source>The Skype instant messenger. We strongly recommend using a free messenger, such as Telegram, instead.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/Tools.cpp" line="32"/>
+        <location filename="../src/Tools.cpp" line="33"/>
         <source>Skype Unstable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/Tools.cpp" line="32"/>
+        <location filename="../src/Tools.cpp" line="33"/>
         <source>Beta versions of the Skype instant messenger. We strongly recommend using a free messenger, such as Telegram, instead.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/Tools.cpp" line="33"/>
+        <location filename="../src/Tools.cpp" line="34"/>
         <source>Microsoft Teams</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/Tools.cpp" line="33"/>
+        <location filename="../src/Tools.cpp" line="34"/>
         <source>The Microsoft Teams business communication platform. We strongly recommend using a free platform, such as Mattermost, instead.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/Tools.cpp" line="36"/>
+        <location filename="../src/Tools.cpp" line="37"/>
         <source>Visual Studio Code</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/Tools.cpp" line="36"/>
+        <location filename="../src/Tools.cpp" line="37"/>
         <source>The Visual Studio Code IDE. We strongly recommend using Qt Creator, KDevelop or other alternative IDEs.</source>
         <translation type="unfinished"></translation>
     </message>

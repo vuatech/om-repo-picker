@@ -35,11 +35,8 @@ MainDialog::MainDialog(QWidget *parent, Qt::WindowFlags f):QDialog(parent,f) {
 	int repoCount=0;
 	for(repoCount=0; repos[repoCount].name; repoCount++);
 
-	_repoWidgets=new RepoWidget*[repoCount];
-	for(int i=0; repos[i].name; i++) {
-		_repoWidgets[i]=new RepoWidget(i, this);
-		_layout->addWidget(_repoWidgets[i], ++y, 1, 1, 2);
-	}
+	_omRepos = new OMRepos(this);
+	_layout->addWidget(_omRepos, ++y, 1, 1, 2);
 
 	_thirdParty = (thirdPartyRepos[0].name ? new ThirdPartyRepoWidget(this) : nullptr);
 	if(_thirdParty)
@@ -57,7 +54,6 @@ MainDialog::MainDialog(QWidget *parent, Qt::WindowFlags f):QDialog(parent,f) {
 }
 
 MainDialog::~MainDialog() {
-	delete[] _repoWidgets;
 }
 
 QSize MainDialog::sizeHint() const {
@@ -102,14 +98,14 @@ void MainDialog::okClicked() {
 
 	for(int i=0; repos[i].name; i++) {
 		QString name=repoName(i, uc);
-		if(_repoWidgets[i]->isChecked() && !repoEnabled(name)) {
+		if(_omRepos->repoEnabled(i) && !repoEnabled(name)) {
 			enable << name;
 			if(uc < 2) {
 				name=repoName(i, uc, rpmArch(), "updates");
 				if(!repoEnabled(name))
 					enable << name;
 			}
-		} else if(!_repoWidgets[i]->isChecked() && repoEnabled(name)) {
+		} else if(!_omRepos->repoEnabled(i) && repoEnabled(name)) {
 			disable << name;
 			if(uc < 2) {
 				name=repoName(i, uc, rpmArch(), "updates");
@@ -122,7 +118,7 @@ void MainDialog::okClicked() {
 		}
 
 		name=repoName(i, uc, rpmArch(), "testing");
-		if(_repoWidgets[i]->isChecked() && _updateChannel->testingEnabled() && !repoEnabled(name))
+		if(_omRepos->repoEnabled(i) && _updateChannel->testingEnabled() && !repoEnabled(name))
 			enable << name;
 		else if(!_updateChannel->testingEnabled() && repoEnabled(name))
 			disable << name;
@@ -142,6 +138,7 @@ void MainDialog::okClicked() {
 						f.write((QLatin1String("name=") + QLatin1String(thirdPartyRepos[i].name) + QLatin1String("\n")).toUtf8());
 						f.write((QLatin1String("baseurl=") + QLatin1String(thirdPartyRepos[i].url) + QLatin1String("\n")).toUtf8());
 						f.write("enabled=1\n");
+						f.write("type=rpm-md\n");
 						if(thirdPartyRepos[i].gpgKey) {
 							f.write("gpgcheck=1\n");
 							f.write((QLatin1String("gpgkey=") + QLatin1String(thirdPartyRepos[i].gpgKey) + QLatin1String("\n")).toUtf8());
