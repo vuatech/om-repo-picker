@@ -9,6 +9,7 @@
 #include "Tools.h"
 #include "UpdateChannelPicker.h"
 #include "RepoWidget.h"
+#include "ThirdPartyRepoWidget.h"
 
 class MainDialog:public QDialog {
 	Q_OBJECT
@@ -22,7 +23,8 @@ protected:
 	QGridLayout *	_layout;
 	UpdateChannelPicker *	_updateChannel;
 	QLabel *	_topLbl;
-	RepoWidget**	_repoWidgets;
+	RepoWidget **	_repoWidgets;
+	ThirdPartyRepoWidget *_thirdParty;
 	QPushButton *	_ok;
 	QPushButton *	_cancel;
 };

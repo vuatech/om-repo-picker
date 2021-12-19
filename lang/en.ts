@@ -4,51 +4,46 @@
 <context>
     <name>MainDialog</name>
     <message>
-        <location filename="../src/MainDialog.cpp" line="10"/>
+        <location filename="../src/MainDialog.cpp" line="20"/>
         <source>OpenMandriva Software Repository Picker</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainDialog.cpp" line="20"/>
+        <location filename="../src/MainDialog.cpp" line="30"/>
         <source>Below, you can select from which repositories you want to install and update packages (extra applications, games, etc.).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainDialog.cpp" line="22"/>
-        <source>32-bit repositories contain the same packages built for 32 bit processors. Those repositories are usually useful only for compatibility with prebuilt packages for older systems - such as binary-only games and applications built for 32-bit processors and running 32-bit Windows applications in Wine.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/MainDialog.cpp" line="36"/>
+        <location filename="../src/MainDialog.cpp" line="48"/>
         <source>&amp;OK</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainDialog.cpp" line="38"/>
+        <location filename="../src/MainDialog.cpp" line="50"/>
         <source>&amp;Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainDialog.cpp" line="170"/>
+        <location filename="../src/MainDialog.cpp" line="178"/>
         <source>Update channel changed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainDialog.cpp" line="170"/>
+        <location filename="../src/MainDialog.cpp" line="178"/>
         <source>The update channel has been changed. You probably want to refresh all packages in the graphical package manager or by running &quot;dnf --refresh distro-sync&quot; in a command line.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
-    <name>RepoWidget</name>
+    <name>ThirdPartyRepoWidget</name>
     <message>
-        <location filename="../src/RepoWidget.cpp" line="10"/>
-        <source>&amp;Enable</source>
+        <location filename="../src/ThirdPartyRepoWidget.cpp" line="4"/>
+        <source>Third party repositories</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/RepoWidget.cpp" line="19"/>
-        <source>Ena&amp;ble 32-bit</source>
+        <location filename="../src/ThirdPartyRepoWidget.cpp" line="5"/>
+        <source>Third Party repositories containing (usually non-free) software where neither the software nor the packages are maintained by the OpenMandriva team. These packages are not under our control and you will receive updates before they have been tested on OpenMandriva. Use at your own risk.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

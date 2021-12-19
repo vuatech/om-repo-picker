@@ -3,9 +3,17 @@
 #include <QtGlobal>
 #include <QMessageBox>
 #include <QDesktopWidget>
+#include <QFile>
 #include <QApplication>
 #include <QWindow>
 #include <QScreen>
+#include <QDir>
+#include <QTemporaryFile>
+#include <QProcess>
+
+extern "C" {
+#include <unistd.h>
+}
 
 MainDialog::MainDialog(QWidget *parent, Qt::WindowFlags f):QDialog(parent,f) {
 	setWindowIcon(QIcon("/usr/share/icons/hicolor/scalable/apps/om-repopicker.svg"));
@@ -20,11 +28,6 @@ MainDialog::MainDialog(QWidget *parent, Qt::WindowFlags f):QDialog(parent,f) {
 	_layout->addWidget(_updateChannel, y, 1, 1, 2);
 
 	QString help = tr("Below, you can select from which repositories you want to install and update packages (extra applications, games, etc.).");
-	QString const sa=secondaryArch();
-	if(!sa.isEmpty()) {
-		help += "\n";
-		help += tr("%1 repositories contain the same packages built for %2 processors. Those repositories are usually useful only for compatibility with prebuilt packages for older systems - such as binary-only games and applications built for %3 processors.").arg(sa).arg(sa).arg(sa);
-	}
 	_topLbl = new QLabel(help, this);
 	_topLbl->setWordWrap(true);
 	_layout->addWidget(_topLbl, ++y, 1, 1, 2);
@@ -37,6 +40,10 @@ MainDialog::MainDialog(QWidget *parent, Qt::WindowFlags f):QDialog(parent,f) {
 		_repoWidgets[i]=new RepoWidget(i, this);
 		_layout->addWidget(_repoWidgets[i], ++y, 1, 1, 2);
 	}
+
+	_thirdParty = (thirdPartyRepos[0].name ? new ThirdPartyRepoWidget(this) : nullptr);
+	if(_thirdParty)
+		_layout->addWidget(_thirdParty, ++y, 1, 1, 2);
 
 	_ok = new QPushButton(tr("&OK"), this);
 	_layout->addWidget(_ok, ++y, 1);
@@ -90,34 +97,19 @@ void MainDialog::okClicked() {
 			name=repoName(i, currentUpdateChannel(), rpmArch(), "testing");
 			if(repoEnabled(name))
 				disable << name;
-			if(!secondaryArch().isEmpty()) {
-				name=repoName(i, currentUpdateChannel(), secondaryArch());
-				if(repoEnabled(name))
-					disable << name;
-				// Also got to disable updates repositories (for release (0) and rock (1))
-				// and testing (for all)
-				if(currentUpdateChannel() < 2) {
-					name=repoName(i, currentUpdateChannel(), secondaryArch(), "updates");
-					if(repoEnabled(name))
-						disable << name;
-				}
-				name=repoName(i, currentUpdateChannel(), secondaryArch(), "testing");
-				if(repoEnabled(name))
-					disable << name;
-			}
 		}
 	}
 
 	for(int i=0; repos[i].name; i++) {
 		QString name=repoName(i, uc);
-		if(_repoWidgets[i]->enabled() && !repoEnabled(name)) {
+		if(_repoWidgets[i]->isChecked() && !repoEnabled(name)) {
 			enable << name;
 			if(uc < 2) {
 				name=repoName(i, uc, rpmArch(), "updates");
 				if(!repoEnabled(name))
 					enable << name;
 			}
-		} else if(!_repoWidgets[i]->enabled() && repoEnabled(name)) {
+		} else if(!_repoWidgets[i]->isChecked() && repoEnabled(name)) {
 			disable << name;
 			if(uc < 2) {
 				name=repoName(i, uc, rpmArch(), "updates");
@@ -130,38 +122,48 @@ void MainDialog::okClicked() {
 		}
 
 		name=repoName(i, uc, rpmArch(), "testing");
-		if(_repoWidgets[i]->enabled() && _updateChannel->testingEnabled() && !repoEnabled(name))
+		if(_repoWidgets[i]->isChecked() && _updateChannel->testingEnabled() && !repoEnabled(name))
 			enable << name;
 		else if(!_updateChannel->testingEnabled() && repoEnabled(name))
 			disable << name;
-
-		if(!secondaryArch().isEmpty()) {
-			name=repoName(i, uc, secondaryArch());
-			if(_repoWidgets[i]->enabled32() && !repoEnabled(name)) {
-				enable << name;
-				if(uc < 2) {
-					name=repoName(i, uc, secondaryArch(), "updates");
-					if(!repoEnabled(name))
-						enable << name;
-				}
+	}
+	if(_thirdParty) {
+		for(int i=0; thirdPartyRepos[i].name; i++) {
+			QString const repoFile = QLatin1String("/etc/yum.repos.d/") + QLatin1String(thirdPartyRepos[i].name) + ".repo";
+			if(_thirdParty->repoEnabled(i)) {
+				if(!QFile::exists(repoFile)) {
+					// The repo files for 3rd party stuff are usually
+					// created by the 3rd party packages themselves,
+					// leaving us with a bit of a chicken-and-egg
+					// problem...
+					QTemporaryFile f(QDir::temp().absoluteFilePath(thirdPartyRepos[i].name));
+					if(f.open()) {
+						f.write((QLatin1String("[") + QLatin1String(thirdPartyRepos[i].name) + QLatin1String("]\n")).toUtf8());
+						f.write((QLatin1String("name=") + QLatin1String(thirdPartyRepos[i].name) + QLatin1String("\n")).toUtf8());
+						f.write((QLatin1String("baseurl=") + QLatin1String(thirdPartyRepos[i].url) + QLatin1String("\n")).toUtf8());
+						f.write("enabled=1\n");
+						if(thirdPartyRepos[i].gpgKey) {
+							f.write("gpgcheck=1\n");
+							f.write((QLatin1String("gpgkey=") + QLatin1String(thirdPartyRepos[i].gpgKey) + QLatin1String("\n")).toUtf8());
+						}
+					}
+					f.close();
+					QString cmd;
+					QStringList args;
+					if(access(QFile::encodeName("/etc/yum.repos.d"), W_OK)) {
+						cmd="/usr/bin/kdesu";
+						args << "--" << "/bin/mv";
+					} else {
+						cmd="/bin/mv";
+					}
+					args << f.fileName() << repoFile;
+					QProcess::execute(cmd, args);
+				} else
+					enable << thirdPartyRepos[i].name;
+			} else {
+				if(QFile::exists(repoFile))
+					disable << thirdPartyRepos[i].name;
 			}
-			else if(!_repoWidgets[i]->enabled32() && repoEnabled(name)) {
-				disable << name;
-				if(uc < 2) {
-					name=repoName(i, uc, secondaryArch(), "updates");
-					if(repoEnabled(name))
-						disable << name;
-				}
-				name=repoName(i, uc, secondaryArch(), "testing");
-				if(repoEnabled(name))
-					disable << name;
-			}
-
-			name=repoName(i, uc, secondaryArch(), "testing");
-			if(_repoWidgets[i]->enabled32() && _updateChannel->testingEnabled() && !repoEnabled(name))
-				enable << name;
-			else if(!_updateChannel->testingEnabled() && repoEnabled(name))
-				disable << name;
 		}
 	}
 	disable.removeDuplicates();
