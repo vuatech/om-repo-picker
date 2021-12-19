@@ -26,6 +26,7 @@ const repo repos[] = {
 
 const repo thirdPartyRepos[] = {
 #ifdef __x86_64__
+	{ "brave", QT_TRANSLATE_NOOP("thirdPartyRepos", "Brave Browser"), QT_TRANSLATE_NOOP("thirdPartyRepos", "The Brave web browser."), "https://brave-browser-rpm-release.s3.brave.com/x86_64/", "https://brave-browser-rpm-release.s3.brave.com/brave-core.asc" },
 	{ "google-chrome", QT_TRANSLATE_NOOP("thirdPartyRepos", "Google Chrome"), QT_TRANSLATE_NOOP("thirdPartyRepos", "The Google Chrome browser. We strongly recommend using a free browser, such as Falkon, Chromium, Firefox or Otter instead."), "http://dl.google.com/linux/chrome/rpm/stable/x86_64", "https://dl.google.com/linux/linux_signing_key.pub" },
 	{ "microsoft-edge", QT_TRANSLATE_NOOP("thirdPartyRepos", "Microsoft Edge"), QT_TRANSLATE_NOOP("thirdPartyRepos", "The Microsoft Edge browser. We strongly recommend using a free browser, such as Falkon, Chromium, Firefox or Otter instead."), "https://packages.microsoft.com/yumrepos/edge/", "https://packages.microsoft.com/keys/microsoft.asc" },
 	{ "skype", QT_TRANSLATE_NOOP("thirdPartyRepos", "Skype"), QT_TRANSLATE_NOOP("thirdPartyRepos", "The Skype instant messenger. We strongly recommend using a free messenger, such as Telegram, instead."), "https://repo.skype.com/rpm/stable/", "https://repo.skype.com/data/SKYPE_GPG-KEY" },
