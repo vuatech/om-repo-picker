@@ -126,7 +126,7 @@ void MainDialog::okClicked() {
 	if(_thirdParty) {
 		for(int i=0; thirdPartyRepos[i].name; i++) {
 			QString const repoFile = QLatin1String("/etc/yum.repos.d/") + QLatin1String(thirdPartyRepos[i].name) + ".repo";
-			if(_thirdParty->repoEnabled(i)) {
+			if(_thirdParty->repoEnabled(i) && !repoEnabled(thirdPartyRepos[i].name)) {
 				if(!QFile::exists(repoFile)) {
 					// The repo files for 3rd party stuff are usually
 					// created by the 3rd party packages themselves,
@@ -157,9 +157,8 @@ void MainDialog::okClicked() {
 					QProcess::execute(cmd, args);
 				} else
 					enable << thirdPartyRepos[i].name;
-			} else {
-				if(QFile::exists(repoFile))
-					disable << thirdPartyRepos[i].name;
+			} else if(!_thirdParty->repoEnabled(i) && repoEnabled(thirdPartyRepos[i].name)) {
+				disable << thirdPartyRepos[i].name;
 			}
 		}
 	}

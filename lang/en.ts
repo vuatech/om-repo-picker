@@ -24,12 +24,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainDialog.cpp" line="175"/>
+        <location filename="../src/MainDialog.cpp" line="174"/>
         <source>Update channel changed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainDialog.cpp" line="175"/>
+        <location filename="../src/MainDialog.cpp" line="174"/>
         <source>The update channel has been changed. You probably want to refresh all packages in the graphical package manager or by running &quot;dnf --refresh distro-sync&quot; in a command line.</source>
         <translation type="unfinished"></translation>
     </message>
