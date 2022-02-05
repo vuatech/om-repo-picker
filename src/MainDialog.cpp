@@ -39,8 +39,11 @@ MainDialog::MainDialog(QWidget *parent, Qt::WindowFlags f):QDialog(parent,f) {
 	_layout->addWidget(_omRepos, ++y, 1, 1, 2);
 
 	_thirdParty = (thirdPartyRepos[0].name ? new ThirdPartyRepoWidget(this) : nullptr);
-	if(_thirdParty)
-		_layout->addWidget(_thirdParty, ++y, 1, 1, 2);
+	if(_thirdParty) {
+		_thirdPartyScroller = new FixedWidthScrollArea(this);
+		_thirdPartyScroller->setWidget(_thirdParty);
+		_layout->addWidget(_thirdPartyScroller, ++y, 1, 1, 2);
+	}
 
 	_ok = new QPushButton(tr("&OK"), this);
 	_layout->addWidget(_ok, ++y, 1);
