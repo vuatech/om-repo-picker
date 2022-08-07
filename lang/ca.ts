@@ -124,7 +124,7 @@
     <message>
         <location filename="../src/Tools.cpp" line="22"/>
         <source>Restricted contains packages that are free, but encumbered by patents that may make them illegal to use or distribute in some countries. You are responsible for complying with your local laws.</source>
-        <translation>El repositori restringit conté paquets gratuïts, però amb patents que poden fer-los il·legals d&apos;usar o distribuir en alguns països. Sou responsable de complir les lleis locals.</translation>
+        <translation>El repositori Restricted conté paquets gratuïts, però amb patents que poden fer-los il·legals d&apos;usar o distribuir en alguns països. Sou responsable de complir les lleis locals.</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="23"/>
