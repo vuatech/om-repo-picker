@@ -129,7 +129,7 @@
     <message>
         <location filename="../src/Tools.cpp" line="23"/>
         <source>Non-Free</source>
-        <translation>No lliure</translation>
+        <translation>Non-Free</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="23"/>
