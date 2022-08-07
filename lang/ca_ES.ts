@@ -104,7 +104,7 @@
     <message>
         <location filename="../src/Tools.cpp" line="20"/>
         <source>Main</source>
-        <translation>Principal</translation>
+        <translation>Main</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="21"/>
