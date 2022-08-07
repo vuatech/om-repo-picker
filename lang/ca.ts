@@ -119,7 +119,7 @@
     <message>
         <location filename="../src/Tools.cpp" line="22"/>
         <source>Restricted</source>
-        <translation>Restringit</translation>
+        <translation>Restricted</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="22"/>
