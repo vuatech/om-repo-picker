@@ -134,7 +134,7 @@
     <message>
         <location filename="../src/Tools.cpp" line="23"/>
         <source>Non-free contains packages that are not free (as in Open Source). Even if we want to, we cannot fix problems in them. We can not read the code, or verify what the packages actually do. While there are no known side effects, they may contain spyware or malware. They may erase your harddisk. You&apos;re on your own.</source>
-        <translation>El repositori no lliure conté paquets que no són gratuïts (com a codi obert). Fins i tot si ho volem, no podem solucionar-ne els problemes. No en podem llegir el codi, ni verificar què fan realment els paquets. Tot i que no se&apos;n coneixen efectes secundaris, poden contenir programari espia o programari maliciós. Poden esborrar el disc dur. Aquí aneu sol.</translation>
+        <translation>El repositori Non-free conté paquets que no són gratuïts (com a codi obert). Fins i tot si ho volem, no podem solucionar-ne els problemes. No en podem llegir el codi, ni verificar què fan realment els paquets. Tot i que no se&apos;n coneixen efectes secundaris, poden contenir programari espia o programari maliciós. Poden esborrar el disc dur. Aquí aneu sol.</translation>
     </message>
 </context>
 <context>
