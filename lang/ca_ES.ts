@@ -96,7 +96,7 @@
     <message>
         <location filename="../src/Tools.cpp" line="20"/>
         <source>The Main repository contains the main packages that make up OpenMandriva Lx. It should always be enabled.</source>
-        <translation>El repositori principal conté els paquets principals que formen l&apos;OpenMandriva Lx. Sempre ha d&apos;estar habilitat.</translation>
+        <translation>El repositori principal Main conté els paquets principals que formen l&apos;OpenMandriva Lx. Sempre ha d&apos;estar habilitat.</translation>
     </message>
 </context>
 <context>
