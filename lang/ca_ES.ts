@@ -109,7 +109,7 @@
     <message>
         <location filename="../src/Tools.cpp" line="21"/>
         <source>Unsupported</source>
-        <translation>Sense suport</translation>
+        <translation>Unsupported</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="21"/>
