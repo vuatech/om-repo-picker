@@ -1,5 +1,5 @@
 project(om-repo-picker)
-SET(PROJECT_VERSION "1.0.3")
+SET(PROJECT_VERSION "1.2.4")
 
 cmake_minimum_required(VERSION 3.14.0 FATAL_ERROR)
 set(QT_MIN_VERSION "5.11.0")
