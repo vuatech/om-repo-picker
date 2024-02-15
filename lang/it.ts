@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="it">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="it">
 <context>
     <name>MainDialog</name>
     <message>
@@ -159,7 +157,7 @@
     <message>
         <location filename="../src/Tools.cpp" line="30"/>
         <source>The Google Chrome browser. We strongly recommend using a free browser, such as Falkon, Chromium, Firefox or Otter instead.</source>
-        <translation>Il navigatore web Google Chrome. Noi raccomandiamo un navigatore libero, come Falkon, Chromium, Firefox o Otter piuttosto.</translation>
+        <translation>Il navigatore web Google Chrome. Noi raccomandiamo di preferire un browser libero come ad esempio Falkon, Chromium, Firefox o Otter</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="31"/>
@@ -169,37 +167,37 @@
     <message>
         <location filename="../src/Tools.cpp" line="31"/>
         <source>The Microsoft Edge browser. We strongly recommend using a free browser, such as Falkon, Chromium, Firefox or Otter instead.</source>
-        <translation>Il navigatore web Microsoft Edge. Noi raccomandiamo un navigatore libero, come Falkon, Chromium, Firefox o Otter piuttosto.</translation>
+        <translation>Il navigatore web Microsoft Edge. Noi raccomandiamo di preferire un browser libero come ad esempio Falkon, Chromium, Firefox o Otter</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="32"/>
         <source>Opera Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Opera Browser</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="32"/>
         <source>The Opera browser. We strongly recommend using a free browser, such as Falkon, Chromium, Firefox or Otter instead.</source>
-        <translation type="unfinished"></translation>
+        <translation>Il navigatore web Opera. Noi raccomandiamo di preferire un browser libero come ad esempio Falkon, Chromium, Firefox o Otter</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="33"/>
         <source>Yandex Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Yandex Browser</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="33"/>
         <source>The Yandex browser. We strongly recommend using a free browser, such as Falkon, Chromium, Firefox or Otter instead.</source>
-        <translation type="unfinished"></translation>
+        <translation>Il navigatore web Yandex. Noi raccomandiamo di preferire un browser libero come ad esempio Falkon, Chromium, Firefox o Otter</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="34"/>
         <source>Vivaldi Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Vivaldi Browser</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="34"/>
         <source>The Vivaldi browser. We strongly recommend using a free browser, such as Falkon, Chromium, Firefox or Otter instead.</source>
-        <translation type="unfinished"></translation>
+        <translation>Il navigatore web Vivaldi. Noi raccomandiamo di preferire un browser libero come ad esempio Falkon, Chromium, Firefox o Otter</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="35"/>
