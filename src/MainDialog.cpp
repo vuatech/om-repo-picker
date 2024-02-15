@@ -2,7 +2,6 @@
 #include "Tools.h"
 #include <QtGlobal>
 #include <QMessageBox>
-#include <QDesktopWidget>
 #include <QFile>
 #include <QApplication>
 #include <QWindow>
