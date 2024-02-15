@@ -1,33 +1,35 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="hi_IN">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="hi_IN">
 <context>
     <name>MainDialog</name>
     <message>
-        <location filename="../src/MainDialog.cpp" line="20"/>
+        <location filename="../src/MainDialog.cpp" line="19"/>
         <source>OpenMandriva Software Repository Picker</source>
         <translation>ओपन-मैन्ड्रीवा सॉफ्टवेयर पैकेज-संग्रह चयन साधन</translation>
     </message>
     <message>
-        <location filename="../src/MainDialog.cpp" line="30"/>
+        <location filename="../src/MainDialog.cpp" line="29"/>
         <source>Below, you can select from which repositories you want to install and update packages (extra applications, games, etc.).</source>
         <translation>नीचे दिए विकल्पों द्वारा आप पैकेज (अतिरिक्त पैकेज, खेल आदि) इंस्टॉल व अपडेट करने हेतु पैकेज-संग्रह का चयन कर सकते हैं।</translation>
     </message>
     <message>
-        <location filename="../src/MainDialog.cpp" line="48"/>
+        <location filename="../src/MainDialog.cpp" line="47"/>
         <source>&amp;OK</source>
         <translation>ठीक है (&amp;O)</translation>
     </message>
     <message>
-        <location filename="../src/MainDialog.cpp" line="50"/>
+        <location filename="../src/MainDialog.cpp" line="49"/>
         <source>&amp;Cancel</source>
         <translation>रद्द करें (&amp;C)</translation>
     </message>
     <message>
-        <location filename="../src/MainDialog.cpp" line="177"/>
+        <location filename="../src/MainDialog.cpp" line="176"/>
         <source>Update channel changed</source>
         <translation>अपडेट माध्यम में परिवर्तन किया गया</translation>
     </message>
     <message>
-        <location filename="../src/MainDialog.cpp" line="177"/>
+        <location filename="../src/MainDialog.cpp" line="176"/>
         <source>The update channel has been changed. You probably want to refresh all packages in the graphical package manager or by running &quot;dnf --refresh distro-sync&quot; in a command line.</source>
         <translation>अपडेट माध्यम में परिवर्तन किया गया। संभवतः आप चित्रात्मक पैकेज प्रबंधक के सभी पैकेजों को रिफ्रेश या कमांड लाइन में &quot;dnf --refresh distro-sync&quot; का निष्पादन करने के इच्छुक हैं।</translation>
     </message>
@@ -171,41 +173,71 @@
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="32"/>
+        <source>Opera Browser</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/Tools.cpp" line="32"/>
+        <source>The Opera browser. We strongly recommend using a free browser, such as Falkon, Chromium, Firefox or Otter instead.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/Tools.cpp" line="33"/>
+        <source>Yandex Browser</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/Tools.cpp" line="33"/>
+        <source>The Yandex browser. We strongly recommend using a free browser, such as Falkon, Chromium, Firefox or Otter instead.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/Tools.cpp" line="34"/>
+        <source>Vivaldi Browser</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/Tools.cpp" line="34"/>
+        <source>The Vivaldi browser. We strongly recommend using a free browser, such as Falkon, Chromium, Firefox or Otter instead.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/Tools.cpp" line="35"/>
         <source>Skype</source>
         <translation>स्काइप</translation>
     </message>
     <message>
-        <location filename="../src/Tools.cpp" line="32"/>
+        <location filename="../src/Tools.cpp" line="35"/>
         <source>The Skype instant messenger. We strongly recommend using a free messenger, such as Telegram, instead.</source>
         <translation>स्काइप त्वरित संदेश साधन। हम इसके स्थान पर एक मुक्त संदेश साधन का उपयोग प्रबलता से अनुशंसित करते हैं, जैसे टेलीग्राम।</translation>
     </message>
     <message>
-        <location filename="../src/Tools.cpp" line="33"/>
+        <location filename="../src/Tools.cpp" line="36"/>
         <source>Skype Unstable</source>
         <translation>अल्पविकसित स्काइप</translation>
     </message>
     <message>
-        <location filename="../src/Tools.cpp" line="33"/>
+        <location filename="../src/Tools.cpp" line="36"/>
         <source>Beta versions of the Skype instant messenger. We strongly recommend using a free messenger, such as Telegram, instead.</source>
         <translation>स्काइप त्वरित संदेश साधन के अल्पविकसित संस्करण। हम इसके स्थान पर एक मुक्त संदेश साधन का उपयोग प्रबलता से अनुशंसित करते हैं, जैसे टेलीग्राम।</translation>
     </message>
     <message>
-        <location filename="../src/Tools.cpp" line="34"/>
+        <location filename="../src/Tools.cpp" line="37"/>
         <source>Microsoft Teams</source>
         <translation>माइक्रोसॉफ्ट टीम</translation>
     </message>
     <message>
-        <location filename="../src/Tools.cpp" line="34"/>
+        <location filename="../src/Tools.cpp" line="37"/>
         <source>The Microsoft Teams business communication platform. We strongly recommend using a free platform, such as Mattermost, instead.</source>
         <translation>माइक्रोसॉफ्ट टीम - व्यवसायिक संचार हेतु साधन। हम इसके स्थान पर एक मुक्त साधन का उपयोग प्रबलता से अनुशंसित करते हैं, जैसे मैटरमोस्ट।</translation>
     </message>
     <message>
-        <location filename="../src/Tools.cpp" line="37"/>
+        <location filename="../src/Tools.cpp" line="40"/>
         <source>Visual Studio Code</source>
         <translation>विज़ुअल स्टूडियो कोड</translation>
     </message>
     <message>
-        <location filename="../src/Tools.cpp" line="37"/>
+        <location filename="../src/Tools.cpp" line="40"/>
         <source>The Visual Studio Code IDE. We strongly recommend using Qt Creator, KDevelop or other alternative IDEs.</source>
         <translation>विज़ुअल स्टूडियो कोड आईडीई यानि एकीकृत सॉफ्टवेयर विकास वातावरण। हम इसके स्थान पर अन्य आईडीई का उपयोग प्रबलता से अनुशंसित करते हैं, जैसे Qt Creator, KDevelop आदि।</translation>
     </message>

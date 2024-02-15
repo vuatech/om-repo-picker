@@ -1,33 +1,35 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="uk_UA">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="uk_UA">
 <context>
     <name>MainDialog</name>
     <message>
-        <location filename="../src/MainDialog.cpp" line="20"/>
+        <location filename="../src/MainDialog.cpp" line="19"/>
         <source>OpenMandriva Software Repository Picker</source>
         <translation>Вибір репозиторію OpenMandriva Software</translation>
     </message>
     <message>
-        <location filename="../src/MainDialog.cpp" line="30"/>
+        <location filename="../src/MainDialog.cpp" line="29"/>
         <source>Below, you can select from which repositories you want to install and update packages (extra applications, games, etc.).</source>
         <translation>Нижче ви можете вибрати, з яких репозиторіїв ви хочете встановлювати та оновлювати пакети (додаткові програми, ігри тощо).</translation>
     </message>
     <message>
-        <location filename="../src/MainDialog.cpp" line="48"/>
+        <location filename="../src/MainDialog.cpp" line="47"/>
         <source>&amp;OK</source>
         <translation>&amp;OK</translation>
     </message>
     <message>
-        <location filename="../src/MainDialog.cpp" line="50"/>
+        <location filename="../src/MainDialog.cpp" line="49"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Скасувати</translation>
     </message>
     <message>
-        <location filename="../src/MainDialog.cpp" line="177"/>
+        <location filename="../src/MainDialog.cpp" line="176"/>
         <source>Update channel changed</source>
         <translation>Змінено канал оновлення</translation>
     </message>
     <message>
-        <location filename="../src/MainDialog.cpp" line="177"/>
+        <location filename="../src/MainDialog.cpp" line="176"/>
         <source>The update channel has been changed. You probably want to refresh all packages in the graphical package manager or by running &quot;dnf --refresh distro-sync&quot; in a command line.</source>
         <translation>Канал оновлення змінено. Ймовірно, ви хочете оновити всі пакунки в графічному менеджері пакетів або запустивши «dnf --refresh distro-sync» у командному рядку.</translation>
     </message>
@@ -171,41 +173,71 @@
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="32"/>
+        <source>Opera Browser</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/Tools.cpp" line="32"/>
+        <source>The Opera browser. We strongly recommend using a free browser, such as Falkon, Chromium, Firefox or Otter instead.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/Tools.cpp" line="33"/>
+        <source>Yandex Browser</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/Tools.cpp" line="33"/>
+        <source>The Yandex browser. We strongly recommend using a free browser, such as Falkon, Chromium, Firefox or Otter instead.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/Tools.cpp" line="34"/>
+        <source>Vivaldi Browser</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/Tools.cpp" line="34"/>
+        <source>The Vivaldi browser. We strongly recommend using a free browser, such as Falkon, Chromium, Firefox or Otter instead.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/Tools.cpp" line="35"/>
         <source>Skype</source>
         <translation>Skype</translation>
     </message>
     <message>
-        <location filename="../src/Tools.cpp" line="32"/>
+        <location filename="../src/Tools.cpp" line="35"/>
         <source>The Skype instant messenger. We strongly recommend using a free messenger, such as Telegram, instead.</source>
         <translation>Месенджер Skype. Натомість ми настійно рекомендуємо використовувати безкоштовний месенджер, наприклад Telegram.</translation>
     </message>
     <message>
-        <location filename="../src/Tools.cpp" line="33"/>
+        <location filename="../src/Tools.cpp" line="36"/>
         <source>Skype Unstable</source>
         <translation>Skype Unstable</translation>
     </message>
     <message>
-        <location filename="../src/Tools.cpp" line="33"/>
+        <location filename="../src/Tools.cpp" line="36"/>
         <source>Beta versions of the Skype instant messenger. We strongly recommend using a free messenger, such as Telegram, instead.</source>
         <translation>Бета-версія месенджера Skype. Натомість ми настійно рекомендуємо використовувати безкоштовний месенджер, наприклад Telegram.</translation>
     </message>
     <message>
-        <location filename="../src/Tools.cpp" line="34"/>
+        <location filename="../src/Tools.cpp" line="37"/>
         <source>Microsoft Teams</source>
         <translation>Microsoft Teams</translation>
     </message>
     <message>
-        <location filename="../src/Tools.cpp" line="34"/>
+        <location filename="../src/Tools.cpp" line="37"/>
         <source>The Microsoft Teams business communication platform. We strongly recommend using a free platform, such as Mattermost, instead.</source>
         <translation>Платформа ділового спілкування Microsoft Teams. Натомість ми настійно рекомендуємо використовувати безкоштовну платформу, наприклад Mattermost.</translation>
     </message>
     <message>
-        <location filename="../src/Tools.cpp" line="37"/>
+        <location filename="../src/Tools.cpp" line="40"/>
         <source>Visual Studio Code</source>
         <translation>Visual Studio Code</translation>
     </message>
     <message>
-        <location filename="../src/Tools.cpp" line="37"/>
+        <location filename="../src/Tools.cpp" line="40"/>
         <source>The Visual Studio Code IDE. We strongly recommend using Qt Creator, KDevelop or other alternative IDEs.</source>
         <translation>IDE Visual Studio Code. Ми наполегливо рекомендуємо використовувати Qt Creator, KDevelop або інші альтернативні IDE.</translation>
     </message>
