@@ -173,6 +173,6 @@ void MainDialog::okClicked() {
 	QDialog::accept();
 
 	if(uc != currentUpdateChannel()) {
-		QMessageBox::information(0, tr("Update channel changed"), tr("The update channel has been changed. You probably want to refresh all packages in the graphical package manager or by running \"dnf --refresh distro-sync\" in a command line."), QMessageBox::Ok);
+		QMessageBox::information(nullptr, tr("Update channel changed"), tr("The update channel has been changed. You probably want to refresh all packages in the graphical package manager or by running \"dnf --refresh distro-sync\" in a command line."), QMessageBox::Ok);
 	}
 }

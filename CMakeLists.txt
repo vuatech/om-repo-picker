@@ -14,6 +14,12 @@ include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDECompilerSettings)
 
+# unlike ECM maintainers, we like Qt keywords
+# and automatic ASCII-to-QString casts
+remove_definitions(-DQT_NO_KEYWORDS)
+remove_definitions(-DQT_NO_CAST_FROM_ASCII)
+remove_definitions(-DQT_NO_CAST_FROM_BYTEARRAY)
+
 find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Gui Widgets LinguistTools)
 
 add_subdirectory(src)

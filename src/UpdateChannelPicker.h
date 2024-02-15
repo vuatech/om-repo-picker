@@ -9,7 +9,7 @@
 class UpdateChannelPicker:public QGroupBox {
 	Q_OBJECT
 public:
-	UpdateChannelPicker(QWidget *parent=0);
+	UpdateChannelPicker(QWidget *parent=nullptr);
 	int updateChannel() const { return _updateChannel->currentIndex(); }
 	bool testingEnabled() const { return _enableTesting->isChecked(); }
 public slots:
