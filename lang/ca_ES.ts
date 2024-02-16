@@ -147,7 +147,7 @@
     <message>
         <location filename="../src/Tools.cpp" line="29"/>
         <source>The Brave web browser.</source>
-        <translation>El navegador web valent</translation>
+        <translation>El navegador web Brave</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="30"/>
