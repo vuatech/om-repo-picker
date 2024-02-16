@@ -177,7 +177,7 @@
     <message>
         <location filename="../src/Tools.cpp" line="32"/>
         <source>The Opera browser. We strongly recommend using a free browser, such as Falkon, Chromium, Firefox or Otter instead.</source>
-        <translation>Navegador Opera. Nós recomendamos fortemente o uso de navegadores livres como o Falkron, Chromium, Firerox ou Otter ao invés do Google Chrome.</translation>
+        <translation>Navegador Opera. Nós recomendamos fortemente o uso de navegadores livres como o Falkon, Chromium, Firefox ou Otter ao invés do Opera.</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="33"/>
