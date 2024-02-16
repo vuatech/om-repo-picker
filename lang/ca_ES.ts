@@ -152,7 +152,7 @@
     <message>
         <location filename="../src/Tools.cpp" line="30"/>
         <source>Google Chrome</source>
-        <translation>Google Chrome</translation>
+        <translation>Navegador Google Chrome</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="30"/>
