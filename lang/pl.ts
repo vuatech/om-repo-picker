@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="pl">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="pl">
 <context>
     <name>MainDialog</name>
     <message>
@@ -174,32 +172,32 @@
     <message>
         <location filename="../src/Tools.cpp" line="32"/>
         <source>Opera Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Przeglądarka Opera</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="32"/>
         <source>The Opera browser. We strongly recommend using a free browser, such as Falkon, Chromium, Firefox or Otter instead.</source>
-        <translation type="unfinished"></translation>
+        <translation>Przeglądarka Opera. Zdecydowanie zalecamy zamiast tego korzystanie z bezpłatnej przeglądarki, takiej jak Falkon, Chromium, Firefox lub Otter.</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="33"/>
         <source>Yandex Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Przeglądarka Yandex</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="33"/>
         <source>The Yandex browser. We strongly recommend using a free browser, such as Falkon, Chromium, Firefox or Otter instead.</source>
-        <translation type="unfinished"></translation>
+        <translation>Przeglądarka Yandex. Zdecydowanie zalecamy zamiast tego korzystanie z bezpłatnej przeglądarki, takiej jak Falkon, Chromium, Firefox lub Otter.</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="34"/>
         <source>Vivaldi Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Przeglądarka Vivaldi</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="34"/>
         <source>The Vivaldi browser. We strongly recommend using a free browser, such as Falkon, Chromium, Firefox or Otter instead.</source>
-        <translation type="unfinished"></translation>
+        <translation>Przeglądarka Vivaldi. Zdecydowanie zalecamy zamiast tego korzystanie z bezpłatnej przeglądarki, takiej jak Falkon, Chromium, Firefox lub Otter.</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="35"/>
