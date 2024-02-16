@@ -14,7 +14,7 @@
     <message>
         <location filename="../src/MainDialog.cpp" line="47"/>
         <source>&amp;OK</source>
-        <translation>%Zastosuj</translation>
+        <translation>&amp;Zastosuj</translation>
     </message>
     <message>
         <location filename="../src/MainDialog.cpp" line="49"/>
