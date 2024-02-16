@@ -197,7 +197,7 @@
     <message>
         <location filename="../src/Tools.cpp" line="34"/>
         <source>The Vivaldi browser. We strongly recommend using a free browser, such as Falkon, Chromium, Firefox or Otter instead.</source>
-        <translation>Navegador Vivaldi. Nós recomendamos fortemente o uso de navegadores livres como o Falkon, Chromium, Firerox ou Otter ao invés do Vivaldi.</translation>
+        <translation>Navegador Vivaldi. Nós recomendamos fortemente o uso de navegadores livres como o Falkon, Chromium, Firefox ou Otter ao invés do Vivaldi.</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="35"/>
