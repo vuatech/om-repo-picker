@@ -17,7 +17,7 @@ const repo updateChannels[] = {
 };
 
 const repo repos[] = {
-	{ "main", QT_TRANSLATE_NOOP("repos", "Main"), QT_TRANSLATE_NOOP("main", "The Main repository contains the main packages that make up OpenMandriva Lx. It should always be enabled."), nullptr, nullptr },
+	{ "main", QT_TRANSLATE_NOOP("repos", "Main"), QT_TRANSLATE_NOOP("repos", "The Main repository contains the main packages that make up OpenMandriva Lx. It should always be enabled."), nullptr, nullptr },
 	{ "unsupported", QT_TRANSLATE_NOOP("repos", "Unsupported"), QT_TRANSLATE_NOOP("repos", "Unsupported contains packages that are free, but not officially supported by OpenMandriva. While we will try to fix them if something breaks, this is a low priority. Enable Unsupported if you need them and don't mind an occasional crash."), nullptr, nullptr },
 	{ "restricted", QT_TRANSLATE_NOOP("repos", "Restricted"), QT_TRANSLATE_NOOP("repos", "Restricted contains packages that are free, but encumbered by patents that may make them illegal to use or distribute in some countries. You are responsible for complying with your local laws."), nullptr, nullptr },
 	{ "non-free", QT_TRANSLATE_NOOP("repos", "Non-Free"), QT_TRANSLATE_NOOP("repos", "Non-free contains packages that are not free (as in Open Source). Even if we want to, we cannot fix problems in them. We can not read the code, or verify what the packages actually do. While there are no known side effects, they may contain spyware or malware. They may erase your harddisk. You're on your own."), nullptr, nullptr },
