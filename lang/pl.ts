@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="pl">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="pl">
 <context>
     <name>MainDialog</name>
     <message>
@@ -94,13 +92,6 @@
     </message>
 </context>
 <context>
-    <name>main</name>
-    <message>
-        <source>The Main repository contains the main packages that make up OpenMandriva Lx. It should always be enabled.</source>
-        <translation type="vanished">Repozytorium Main zawiera główne pakiety tworzące OpenMandriva Lx. Powinno być zawsze włączone.</translation>
-    </message>
-</context>
-<context>
     <name>repos</name>
     <message>
         <location filename="../src/Tools.cpp" line="20"/>
@@ -110,7 +101,7 @@
     <message>
         <location filename="../src/Tools.cpp" line="20"/>
         <source>The Main repository contains the main packages that make up OpenMandriva Lx. It should always be enabled.</source>
-        <translation type="unfinished">Repozytorium Main zawiera główne pakiety tworzące OpenMandriva Lx. Powinno być zawsze włączone.</translation>
+        <translation>Repozytorium Main zawiera główne pakiety tworzące OpenMandriva Lx. Powinno być zawsze włączone.</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="21"/>
