@@ -187,7 +187,7 @@
     <message>
         <location filename="../src/Tools.cpp" line="33"/>
         <source>The Yandex browser. We strongly recommend using a free browser, such as Falkon, Chromium, Firefox or Otter instead.</source>
-        <translation>Navegador Yandex. Nós recomendamos fortemente o uso de navegadores livres como o Falkon, Chromium, Firerox ou Otter ao invés do Yandex.</translation>
+        <translation>Navegador Yandex. Nós recomendamos fortemente o uso de navegadores livres como o Falkon, Chromium, Firefox ou Otter ao invés do Yandex.</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="34"/>
