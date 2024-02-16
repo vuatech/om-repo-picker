@@ -109,18 +109,15 @@
     </message>
 </context>
 <context>
-    <name>main</name>
-    <message>
-        <location filename="../src/Tools.cpp" line="20"/>
-        <source>The Main repository contains the main packages that make up OpenMandriva Lx. It should always be enabled.</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>repos</name>
     <message>
         <location filename="../src/Tools.cpp" line="20"/>
         <source>Main</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/Tools.cpp" line="20"/>
+        <source>The Main repository contains the main packages that make up OpenMandriva Lx. It should always be enabled.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

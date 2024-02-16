@@ -111,9 +111,8 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../src/Tools.cpp" line="20"/>
         <source>The Main repository contains the main packages that make up OpenMandriva Lx. It should always be enabled.</source>
-        <translation>Das Hauptrepository (&quot;Main&quot;) enthält die Hauptpakete, aus denen OpenMandriva Lx besteht. Es sollte immer aktiv sein.</translation>
+        <translation type="vanished">Das Hauptrepository (&quot;Main&quot;) enthält die Hauptpakete, aus denen OpenMandriva Lx besteht. Es sollte immer aktiv sein.</translation>
     </message>
 </context>
 <context>
@@ -122,6 +121,11 @@
         <location filename="../src/Tools.cpp" line="20"/>
         <source>Main</source>
         <translation>Main</translation>
+    </message>
+    <message>
+        <location filename="../src/Tools.cpp" line="20"/>
+        <source>The Main repository contains the main packages that make up OpenMandriva Lx. It should always be enabled.</source>
+        <translation type="unfinished">Das Hauptrepository (&quot;Main&quot;) enthält die Hauptpakete, aus denen OpenMandriva Lx besteht. Es sollte immer aktiv sein.</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="21"/>

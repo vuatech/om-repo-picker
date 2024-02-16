@@ -96,9 +96,8 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../src/Tools.cpp" line="20"/>
         <source>The Main repository contains the main packages that make up OpenMandriva Lx. It should always be enabled.</source>
-        <translation>मुख्य पैकेज-संग्रह में ओपन-मैन्ड्रीवा एलएक्स सृजन संबंधी मुख्य पैकेज हैं। इसे सदैव सक्रिय रखें।</translation>
+        <translation type="vanished">मुख्य पैकेज-संग्रह में ओपन-मैन्ड्रीवा एलएक्स सृजन संबंधी मुख्य पैकेज हैं। इसे सदैव सक्रिय रखें।</translation>
     </message>
 </context>
 <context>
@@ -107,6 +106,11 @@
         <location filename="../src/Tools.cpp" line="20"/>
         <source>Main</source>
         <translation>मुख्य</translation>
+    </message>
+    <message>
+        <location filename="../src/Tools.cpp" line="20"/>
+        <source>The Main repository contains the main packages that make up OpenMandriva Lx. It should always be enabled.</source>
+        <translation type="unfinished">मुख्य पैकेज-संग्रह में ओपन-मैन्ड्रीवा एलएक्स सृजन संबंधी मुख्य पैकेज हैं। इसे सदैव सक्रिय रखें।</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="21"/>

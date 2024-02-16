@@ -96,9 +96,8 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../src/Tools.cpp" line="20"/>
         <source>The Main repository contains the main packages that make up OpenMandriva Lx. It should always be enabled.</source>
-        <translation>Репозиторий Main содержит основные пакеты, из которых состоит OpenMandriva Lx. Всегда должен быть включен.</translation>
+        <translation type="vanished">Репозиторий Main содержит основные пакеты, из которых состоит OpenMandriva Lx. Всегда должен быть включен.</translation>
     </message>
 </context>
 <context>
@@ -107,6 +106,11 @@
         <location filename="../src/Tools.cpp" line="20"/>
         <source>Main</source>
         <translation>Main</translation>
+    </message>
+    <message>
+        <location filename="../src/Tools.cpp" line="20"/>
+        <source>The Main repository contains the main packages that make up OpenMandriva Lx. It should always be enabled.</source>
+        <translation type="unfinished">Репозиторий Main содержит основные пакеты, из которых состоит OpenMandriva Lx. Всегда должен быть включен.</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="21"/>
