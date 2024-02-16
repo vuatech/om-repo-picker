@@ -132,8 +132,8 @@ bool disableRepos(QStringList const &repos) {
 	QString cmd;
 	QStringList args;
 	if(access(QFile::encodeName("/etc/yum.repos.d/openmandriva-cooker-" + rpmArch() + ".repo"), W_OK)) {
-		cmd="/usr/bin/kdesu";
-		args << "--" << "/usr/bin/dnf";
+		cmd="/usr/bin/pkexec";
+		args << "/usr/bin/dnf";
 	} else {
 		cmd="/usr/bin/dnf";
 	}
@@ -145,8 +145,8 @@ bool enableRepos(QStringList const &repos) {
 	QString cmd;
 	QStringList args;
 	if(access(QFile::encodeName("/etc/yum.repos.d/openmandriva-cooker-" + rpmArch() + ".repo"), W_OK)) {
-		cmd="/usr/bin/kdesu";
-		args << "--" << "/usr/bin/dnf";
+		cmd="/usr/bin/pkexec";
+		args << "/usr/bin/dnf";
 	} else {
 		cmd="/usr/bin/dnf";
 	}

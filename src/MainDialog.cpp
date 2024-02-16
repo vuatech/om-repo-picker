@@ -150,8 +150,8 @@ void MainDialog::okClicked() {
 					QString cmd;
 					QStringList args;
 					if(access(QFile::encodeName("/etc/yum.repos.d"), W_OK)) {
-						cmd="/usr/bin/kdesu";
-						args << "--" << "/bin/mv";
+						cmd="/usr/bin/pkexec";
+						args << "/bin/mv";
 					} else {
 						cmd="/bin/mv";
 					}
