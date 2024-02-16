@@ -162,7 +162,7 @@
     <message>
         <location filename="../src/Tools.cpp" line="31"/>
         <source>Microsoft Edge</source>
-        <translation>Microsoft Edge</translation>
+        <translation>Navegador Microsoft Edge</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="31"/>
