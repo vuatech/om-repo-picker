@@ -172,7 +172,7 @@
     <message>
         <location filename="../src/Tools.cpp" line="32"/>
         <source>Opera Browser</source>
-        <translation>Navegador Opera. Nós recomendamos fortemente o uso de navegadores livres como o Falkon, Chromium, Firefox ou Otter ao invés do Opera</translation>
+        <translation>Navegador Opera.</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="32"/>
