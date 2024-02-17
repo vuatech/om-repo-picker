@@ -144,7 +144,7 @@
     <message>
         <location filename="../src/Tools.cpp" line="29"/>
         <source>The Brave web browser.</source>
-        <translation>Brave selain, joka estää jäljittäjät sekä mainokset ja samasta syystä väittää olevansa 3x nopempi kuin Google Chrome</translation>
+        <translation>Brave Internetselain, joka estää jäljittäjät sekä mainokset ja samasta syystä väittää olevansa 3x nopempi kuin Google Chrome</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="30"/>
