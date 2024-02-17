@@ -154,7 +154,7 @@
     <message>
         <location filename="../src/Tools.cpp" line="30"/>
         <source>The Google Chrome browser. We strongly recommend using a free browser, such as Falkon, Chromium, Firefox or Otter instead.</source>
-        <translation>Google Chrome on suosittu selain, mutta suosittelemme käyttämään selaimia, kuten Falkon, Chromium, Firefox jne.</translation>
+        <translation>Google Chrome internetselain. Suosittelemme käyttämään ilmaista selainta, kuten Falkon, Chromium ja Firefox.</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="31"/>
