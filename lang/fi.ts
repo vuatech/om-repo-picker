@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="fi">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="fi">
 <context>
     <name>MainDialog</name>
     <message>
@@ -94,13 +92,6 @@
     </message>
 </context>
 <context>
-    <name>main</name>
-    <message>
-        <source>The Main repository contains the main packages that make up OpenMandriva Lx. It should always be enabled.</source>
-        <translation type="vanished">Main arkisto sisältää pääosan paketeista, jotka muodostavat OpenMandriva Lx:n. Tämän tulee olla aina käytössä.</translation>
-    </message>
-</context>
-<context>
     <name>repos</name>
     <message>
         <location filename="../src/Tools.cpp" line="20"/>
@@ -110,7 +101,7 @@
     <message>
         <location filename="../src/Tools.cpp" line="20"/>
         <source>The Main repository contains the main packages that make up OpenMandriva Lx. It should always be enabled.</source>
-        <translation type="unfinished">Main arkisto sisältää pääosan paketeista, jotka muodostavat OpenMandriva Lx:n. Tämän tulee olla aina käytössä.</translation>
+        <translation>Main arkisto sisältää pääosan paketeista, jotka muodostavat OpenMandriva Lx:n. Tämän tulee olla aina käytössä.</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="21"/>
@@ -178,32 +169,32 @@
     <message>
         <location filename="../src/Tools.cpp" line="32"/>
         <source>Opera Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Opera</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="32"/>
         <source>The Opera browser. We strongly recommend using a free browser, such as Falkon, Chromium, Firefox or Otter instead.</source>
-        <translation type="unfinished"></translation>
+        <translation>Opera internetselain. Suosittelemme käyttämään ilmaista selainta, kuten Falkon, Chromium ja Firefox.</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="33"/>
         <source>Yandex Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Yandex</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="33"/>
         <source>The Yandex browser. We strongly recommend using a free browser, such as Falkon, Chromium, Firefox or Otter instead.</source>
-        <translation type="unfinished"></translation>
+        <translation>Yandex internetselain. Suosittelemme käyttämään ilmaista selainta, kuten Falkon, Chromium ja Firefox.</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="34"/>
         <source>Vivaldi Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Vivaldi</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="34"/>
         <source>The Vivaldi browser. We strongly recommend using a free browser, such as Falkon, Chromium, Firefox or Otter instead.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vivaldi internetselain. Suosittelemme käyttämään ilmaista selainta, kuten Falkon, Chromium ja Firefox.</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="35"/>
