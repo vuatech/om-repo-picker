@@ -164,7 +164,7 @@
     <message>
         <location filename="../src/Tools.cpp" line="31"/>
         <source>The Microsoft Edge browser. We strongly recommend using a free browser, such as Falkon, Chromium, Firefox or Otter instead.</source>
-        <translation>Microsoft Edge on suosittu selain, mutta suosittelemme käyttämään selaimia, kuten Falkon, Chromium, Firefox jne.</translation>
+        <translation>Microsoft Edge internetselain. Suosittelemme käyttämään ilmaista selainta, kuten Falkon, Chromium ja Firefox.</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="32"/>
