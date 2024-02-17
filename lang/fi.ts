@@ -139,7 +139,7 @@
     <message>
         <location filename="../src/Tools.cpp" line="29"/>
         <source>Brave Browser</source>
-        <translation>Brave Browser</translation>
+        <translation>Brave</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="29"/>
