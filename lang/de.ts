@@ -131,7 +131,7 @@
     <message>
         <location filename="../src/Tools.cpp" line="23"/>
         <source>Non-free contains packages that are not free (as in Open Source). Even if we want to, we cannot fix problems in them. We can not read the code, or verify what the packages actually do. While there are no known side effects, they may contain spyware or malware. They may erase your harddisk. You&apos;re on your own.</source>
-        <translation>&quot;Non-free&quot; enthält Pakete, die nicht frei sind (wie in Open-Source). Selbst wenn wir es wollten, können wir keine Probleme in ihnen beheben. Wir können den Code nicht lesen oder verifizieren, was die Pakete tatsächlich tun. Obwohl es keine bekannten Nebenwirkungen gibt, können sie Spyware oder Malware enthalten. Sie können Ihr Festplattenlaufwerk löschen. Sie sind auf sich allein gestellt.</translation>
+        <translation>&quot;Non-free&quot; enthält Pakete, die nicht frei sind (wie in Open-Source). Selbst wenn wir es wollten, können wir keine Probleme in ihnen beheben. Wir können den Code nicht lesen oder verifizieren, was die Pakete tatsächlich tun. Obwohl es keine bekannten Seiteneffekte gibt, können sie Spyware oder Malware enthalten. Sie können Ihr Festplattenlaufwerk löschen. Sie sind auf sich allein gestellt.</translation>
     </message>
 </context>
 <context>
