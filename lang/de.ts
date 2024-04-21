@@ -78,7 +78,7 @@
     <message>
         <location filename="../src/UpdateChannelPicker.cpp" line="31"/>
         <source>You&apos;re trying to switch to an update channel older than what you&apos;re currently using. This will result in downgrading packages, which may or may not work. Going back to older versions is unsupported (older versions of applications can&apos;t know about potential changes in newer versions...) and may well break your system. Are you sure you want to do this?</source>
-        <translation>Sie versuchen, zu einem Update-Kanal zu wechseln, der älter ist als der, den Sie derzeit verwenden. Dies resultiert in einer Herabstufung der Pakete, was funktionieren kann, aber nicht muss. Das Zurückgehen zu älteren Versionen wird nicht unterstützt (ältere Versionen von Anwendungen können keine Kenntnis von möglichen Änderungen in neueren Versionen haben ...) und kann Ihr System beschädigen. Sind Sie sicher, dass Sie das tun wollen?</translation>
+        <translation>Sie versuchen, zu einem Update-Kanal zu wechseln, der älter ist als der, den Sie derzeit verwenden. Dies resultiert in einer Herabstufung der Pakete, was funktionieren kann, aber nicht muss. Ein Zurückgehen auf ältere Versionen wird nicht unterstützt (ältere Versionen von Anwendungen können keine Kenntnis von möglichen Änderungen in neueren Versionen haben ...) und kann Ihr System beschädigen. Sind Sie sicher, dass Sie das tun wollen?</translation>
     </message>
     <message>
         <location filename="../src/UpdateChannelPicker.cpp" line="36"/>
