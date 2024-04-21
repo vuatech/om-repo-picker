@@ -88,7 +88,7 @@
     <message>
         <location filename="../src/UpdateChannelPicker.cpp" line="36"/>
         <source>You&apos;re about to switch to a faster update channel. Please note that this is a permanent switch, downgrading your system by going back to a slower update channel is not supported and may break your system. Are you sure you want to do this?</source>
-        <translation>Sie sind im Begriff, zu einem schnelleren Update-Kanal zu wechseln. Bitte beachten Sie, dass es sich hierbei um eine dauerhafte Umstellung handelt. Eine Herabstufung Ihres Systems durch Rückkehr zu einem langsameren Aktualisierungskanal wird nicht unterstützt und kann Ihr System beschädigen. Sind Sie sicher, dass Sie dies tun wollen?</translation>
+        <translation>Sie sind im Begriff, zu einem schnelleren Update-Kanal zu wechseln. Bitte beachten Sie, dass es sich hierbei um eine dauerhafte Umstellung handelt. Eine Herabstufung Ihres Systems durch Rückkehr zu einem langsameren Update-Kanal wird nicht unterstützt und kann Ihr System beschädigen. Sind Sie sicher, dass Sie dies tun wollen?</translation>
     </message>
 </context>
 <context>
