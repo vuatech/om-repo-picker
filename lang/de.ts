@@ -29,7 +29,7 @@
     <message>
         <location filename="../src/MainDialog.cpp" line="176"/>
         <source>The update channel has been changed. You probably want to refresh all packages in the graphical package manager or by running &quot;dnf --refresh distro-sync&quot; in a command line.</source>
-        <translation>Der Aktualisierungskanal ist geändert worden. Wahrscheinlich möchten Sie alle Pakete im grafischen Paketmanager oder durch Ausführen von &quot;dnf --refresh distro-sync&quot; in einer Befehlszeile auffrischen.</translation>
+        <translation>Der Update-Kanal ist geändert worden. Wahrscheinlich möchten Sie alle Pakete im grafischen Paketmanager oder durch Ausführen von &quot;dnf --refresh distro-sync&quot; in einer Befehlszeile auffrischen.</translation>
     </message>
 </context>
 <context>
