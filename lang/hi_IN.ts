@@ -114,12 +114,12 @@
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="21"/>
-        <source>Unsupported</source>
+        <source>Extra</source>
         <translation>असमर्थित</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="21"/>
-        <source>Unsupported contains packages that are free, but not officially supported by OpenMandriva. While we will try to fix them if something breaks, this is a low priority. Enable Unsupported if you need them and don&apos;t mind an occasional crash.</source>
+        <source>Extra contains packages that are free, but not officially supported by OpenMandriva. While we will try to fix them if something breaks, this is a low priority. Enable Extra if you need them and don&apos;t mind an occasional crash.</source>
         <translation>असमर्थित में उपयोग हेतु निःशुल्क पैकेज हैं परन्तु ये आधिकारिक तौर पर ओपन-मैन्ड्रीवा द्वारा समर्थित नहीं हैं। समस्या होने पर हम उसके निवारण का प्रयास करेंगे लेकिन इन पैकेज हेतु प्राथमिकता कम है। यदि आवश्यकता है व कभी-कभार कार्यप्रणाली निरस्त होना आपके लिए कोई बड़ी समस्या नहीं है केवल तभी असमर्थित सक्रिय करें।</translation>
     </message>
     <message>

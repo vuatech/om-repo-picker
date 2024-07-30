@@ -105,13 +105,13 @@
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="21"/>
-        <source>Unsupported</source>
-        <translation>Unsupported</translation>
+        <source>Extra</source>
+        <translation>Extra</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="21"/>
-        <source>Unsupported contains packages that are free, but not officially supported by OpenMandriva. While we will try to fix them if something breaks, this is a low priority. Enable Unsupported if you need them and don&apos;t mind an occasional crash.</source>
-        <translation>&quot;Unsupported&quot; enthält Pakete, die frei sind, aber nicht offiziell von OpenMandriva unterstützt werden. Wir werden zwar versuchen, diese Pakete zu reparieren, wenn etwas kaputt geht, aber dies hat eine niedrige Priorität. Aktivieren Sie &quot;Unsupported&quot;, wenn Sie diese benötigen und sich nicht an gelegentlichen Abstürzen stören.</translation>
+        <source>Extra contains packages that are free, but not officially supported by OpenMandriva. While we will try to fix them if something breaks, this is a low priority. Enable Extra if you need them and don&apos;t mind an occasional crash.</source>
+        <translation>&quot;Extra&quot; enthält Pakete, die frei sind, aber nicht offiziell von OpenMandriva unterstützt werden. Wir werden zwar versuchen, diese Pakete zu reparieren, wenn etwas kaputt geht, aber dies hat eine niedrige Priorität. Aktivieren Sie &quot;Extra&quot;, wenn Sie diese benötigen und sich nicht an gelegentlichen Abstürzen stören.</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="22"/>

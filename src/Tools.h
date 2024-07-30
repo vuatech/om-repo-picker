@@ -18,7 +18,7 @@ extern int currentUpdateChannel();
 /   knows the difference between e.g. x86_64 and znver1 */
 extern QString rpmArch();
 /** Get the full name for a repository
- * @param repo Repository index (main/unsupported/restricted/non-free)
+ * @param repo Repository index (main/extra/restricted/non-free)
  * @param updateChannel Update channel index (release/rock/rolling/cooker) [If negative, active update channel will be used]
  * @param arch Architecture (by default, current architecture will be used)
  * @param special "Special" repository (updates/testing/...)
