@@ -111,7 +111,7 @@
     <message>
         <location filename="../src/Tools.cpp" line="21"/>
         <source>Extra contains packages that are free, but not officially supported by OpenMandriva. While we will try to fix them if something breaks, this is a low priority. Enable Extra if you need them and don&apos;t mind an occasional crash.</source>
-        <translation>Extra contiene pacchetti che sono liberi, ma non ufficialmente supportati da OpenMandriva. Mentre cercheremo di sistemarli se qualcosa si guasta, questa è una bassa priorità. Abilita Extra se ne hai bisogno e non ti preoccupa un crash occasionale.</translation>
+        <translation>Extra contiene pacchetti che sono liberi, ma non ufficialmente supportati da OpenMandriva. Mentre cercheremo di sistemarli se qualcosa si guasta, questa è una bassa priorità. Abilita Extra se ne hai bisogno e non ti preoccupa un crash occasionale</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="22"/>
