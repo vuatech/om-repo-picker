@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="ru">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="ru">
 <context>
     <name>MainDialog</name>
     <message>
@@ -94,13 +92,6 @@
     </message>
 </context>
 <context>
-    <name>main</name>
-    <message>
-        <source>The Main repository contains the main packages that make up OpenMandriva Lx. It should always be enabled.</source>
-        <translation type="vanished">Репозиторий Main содержит основные пакеты, из которых состоит OpenMandriva Lx. Всегда должен быть включен.</translation>
-    </message>
-</context>
-<context>
     <name>repos</name>
     <message>
         <location filename="../src/Tools.cpp" line="20"/>
@@ -110,7 +101,7 @@
     <message>
         <location filename="../src/Tools.cpp" line="20"/>
         <source>The Main repository contains the main packages that make up OpenMandriva Lx. It should always be enabled.</source>
-        <translation type="unfinished">Репозиторий Main содержит основные пакеты, из которых состоит OpenMandriva Lx. Всегда должен быть включен.</translation>
+        <translation>Репозиторий Main содержит основные пакеты, из которых состоит OpenMandriva Lx. Всегда должен быть включен.</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="21"/>
@@ -178,32 +169,32 @@
     <message>
         <location filename="../src/Tools.cpp" line="32"/>
         <source>Opera Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Браузер Opera</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="32"/>
         <source>The Opera browser. We strongly recommend using a free browser, such as Falkon, Chromium, Firefox or Otter instead.</source>
-        <translation type="unfinished"></translation>
+        <translation>Браузер Opera. Мы настоятельно рекомендуем использовать свободный браузер, такой как Falkon, Chromium, Firefox или Otter.</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="33"/>
         <source>Yandex Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Яндекс Браузер</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="33"/>
         <source>The Yandex browser. We strongly recommend using a free browser, such as Falkon, Chromium, Firefox or Otter instead.</source>
-        <translation type="unfinished"></translation>
+        <translation>Яндекс Браузер. Мы настоятельно рекомендуем вместо этого использовать бесплатный браузер, такой как Falkon, Chromium, Firefox или Otter.</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="34"/>
         <source>Vivaldi Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Браузер Vivaldi</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="34"/>
         <source>The Vivaldi browser. We strongly recommend using a free browser, such as Falkon, Chromium, Firefox or Otter instead.</source>
-        <translation type="unfinished"></translation>
+        <translation>Браузер Vivaldi. Мы настоятельно рекомендуем вместо этого использовать бесплатный браузер, такой как Falkon, Chromium, Firefox или Otter.</translation>
     </message>
     <message>
         <location filename="../src/Tools.cpp" line="35"/>
